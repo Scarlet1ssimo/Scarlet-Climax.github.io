@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Scarlet Devil Mansion</title>
+  <title>调度场算法 | Scarlet Devil Mansion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Scarlet什么都不会">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Scarlet Devil Mansion">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一个很结构化的表达式求值算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="调度场算法">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/shunting-yard/index.html">
 <meta property="og:site_name" content="Scarlet Devil Mansion">
-<meta property="og:description" content="Scarlet什么都不会">
+<meta property="og:description" content="一个很结构化的表达式求值算法">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Shunting_yard.svg/400px-Shunting_yard.svg.png">
+<meta property="og:updated_time" content="2018-11-19T16:30:14.965Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Scarlet Devil Mansion">
-<meta name="twitter:description" content="Scarlet什么都不会">
+<meta name="twitter:title" content="调度场算法">
+<meta name="twitter:description" content="一个很结构化的表达式求值算法">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Shunting_yard.svg/400px-Shunting_yard.svg.png">
   
     <link rel="alternative" href="/atom.xml" title="Scarlet Devil Mansion" type="application/atom+xml">
   
@@ -143,103 +146,221 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-shunting-yard" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      调度场算法
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/20/shunting-yard/" class="archive-article-date">
+
+        
+        <a href="/2018/11/20/shunting-yard/" class="archive-article-date">
   	<time datetime="2018-11-19T16:26:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/20/shunting-yard/">调度场算法</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一个很结构化的表达式求值算法</p>
+<a id="more"></a>
+<h2 id="一个看了就会写的图例"><a href="#一个看了就会写的图例" class="headerlink" title="一个看了就会写的图例"></a>一个看了就会写的图例</h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Shunting_yard.svg/400px-Shunting_yard.svg.png" alt="调度场算法"></p>
+<h2 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h2><p>对于一个仅含四则运算的表达式，我们可以通过这样操作把它变成后缀表达式</p>
+<ul>
+<li>当还有记号可以读取时：<ul>
+<li>读取一个记号。</li>
+<li>如果这个记号表示一个数字，那么将其添加到输出队列中。</li>
+<li>如果这个记号表示一个操作符，记做o1，那么：<ul>
+<li>只要存在另一个记为o2的操作符位于栈的顶端，并且<ul>
+<li>如果o1的运算符优先级要小于或者等于o2的优先级，那么</li>
+<li>将o2从栈的顶端弹出并且放入输出队列中（循环直至以上条件不满足为止）；</li>
+</ul>
+</li>
+<li>然后，将o1压入栈的顶端。</li>
+</ul>
+</li>
+<li>如果这个记号是一个左括号，那么就将其压入栈当中。</li>
+<li>如果这个记号是一个右括号，那么：<ul>
+<li>从栈当中不断地弹出操作符并且放入输出队列中，直到栈顶部的元素为左括号为止。</li>
+<li>将左括号从栈的顶端弹出，但并不放入输出队列中去。</li>
+<li>如果在找到一个左括号之前栈就已经弹出了所有元素，那么就表示在表达式中存在不匹配的括号。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当再没有记号可以读取时：<ul>
+<li>如果此时在栈当中还有操作符：<ul>
+<li>如果此时位于栈顶端的操作符是一个括号，那么就表示在表达式中存在不匹配的括号。</li>
+<li>将操作符逐个弹出并放入输出队列中。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>退出算法。</li>
+</ul>
+<p>对于一个后缀表达式，我们可以这样计算它的值</p>
+<ul>
+<li>当还有记号可以读取时：<ul>
+<li>读取一个记号。</li>
+<li>如果这个记号表示一个数字，那么将其添加到栈中。</li>
+<li>如果这个记号表示一个操作符，记做o1，那么：<ul>
+<li>从栈中取出该操作符对应数量的操作数</li>
+<li>计算操作符</li>
+<li>将计算所得的值入栈</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当再没有记号可以读取时：<ul>
+<li>如果此时在栈当中还有数：<ul>
+<li>错误输入</li>
+</ul>
+</li>
+<li>如果此时栈内只剩一个数<ul>
+<li>这个值就是整个计算式的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>退出算法。</li>
+</ul>
+<p>注意到前算法的输出队列的入队顺序和后算法的入栈顺序相同，那么让两个算法同时进行就可以表达式求值了。</p>
+<h2 id="轻松简单的实现"><a href="#轻松简单的实现" class="headerlink" title="轻松简单的实现"></a>轻松简单的实现</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    Author: Scarlet</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">char</span> ops[<span class="number">4</span>] = <span class="string">"+-*/"</span>, S[<span class="number">1000</span>];</span><br><span class="line"><span class="keyword">int</span> st[<span class="number">1000</span>], tp, TP;</span><br><span class="line"><span class="keyword">double</span> ST[<span class="number">1000</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getnxt</span><span class="params">(<span class="keyword">int</span> *x, <span class="keyword">int</span> *i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch = S[*i];</span><br><span class="line">	<span class="keyword">int</span> _[<span class="number">233</span>], __[<span class="number">233</span>];</span><br><span class="line">	_[<span class="string">'('</span>] = <span class="number">2</span>, _[<span class="string">')'</span>] = <span class="number">3</span>, _[<span class="string">'+'</span>] = <span class="number">4</span>, _[<span class="string">'-'</span>] = <span class="number">4</span>, _[<span class="string">'*'</span>] = <span class="number">4</span>, _[<span class="string">'/'</span>] = <span class="number">4</span>;</span><br><span class="line">	__[<span class="string">'('</span>] = <span class="number">0</span>, __[<span class="string">')'</span>] = <span class="number">0</span>, __[<span class="string">'+'</span>] = <span class="number">0</span>, __[<span class="string">'-'</span>] = <span class="number">1</span>, __[<span class="string">'*'</span>] = <span class="number">2</span>, __[<span class="string">'/'</span>] = <span class="number">3</span>;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">isdigit</span>(ch))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (*x = <span class="number">0</span>; <span class="built_in">isdigit</span>(S[*i]); ++*i)</span><br><span class="line">			*x = *x * <span class="number">10</span> + S[*i] - <span class="number">48</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> *x = __[ch], ++*i, _[ch];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">prt</span><span class="params">(<span class="keyword">int</span> op,<span class="keyword">int</span> x)</span><span class="comment">//后缀表达式转值</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(op==<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, x);</span><br><span class="line">		ST[TP++] = (<span class="keyword">double</span>)x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%c "</span>, ops[x]);</span><br><span class="line">		<span class="keyword">double</span> Y = ST[TP - <span class="number">1</span>], X = ST[TP - <span class="number">2</span>];TP--;</span><br><span class="line">		<span class="keyword">if</span> (x == <span class="number">0</span>)</span><br><span class="line">			ST[TP - <span class="number">1</span>] = X + Y;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(x==<span class="number">1</span>)</span><br><span class="line">			ST[TP - <span class="number">1</span>] = X - Y;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(x==<span class="number">2</span>)</span><br><span class="line">			ST[TP - <span class="number">1</span>] = X * Y;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			ST[TP - <span class="number">1</span>] = X / Y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"w.in"</span>, <span class="string">"r"</span>, <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>, S);</span><br><span class="line">	<span class="keyword">int</span> L = <span class="built_in">strlen</span>(S);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L;)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> x, op = getnxt(&amp;x, &amp;i);</span><br><span class="line">		<span class="keyword">if</span> (op == <span class="number">1</span>)</span><br><span class="line">			prt(<span class="number">0</span>, x);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">4</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (; tp &amp;&amp; st[tp - <span class="number">1</span>] / <span class="number">2</span> &gt;= x / <span class="number">2</span>;)</span><br><span class="line">				prt(<span class="number">1</span>, st[--tp]);</span><br><span class="line">			st[tp++] = x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">2</span>)</span><br><span class="line">			st[tp++] = <span class="number">-2</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">for</span> (tp--; tp &amp;&amp; st[tp] != <span class="number">-2</span>;)</span><br><span class="line">				prt(<span class="number">1</span>, st[tp--]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (; tp;)</span><br><span class="line">		prt(<span class="number">1</span>, st[--tp]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n%lf\n"</span>, ST[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>这也太强了吧QAQ</p>
+<p>惊了，怕是大学里学的第一个算法= =</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/20/shunting-yard/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/19/sqrt-algo/" class="archive-article-date">
-  	<time datetime="2018-11-19T15:34:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/19/sqrt-algo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">根号算法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/19/sqrt-algo/">根号算法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/19/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-19T14:52:25.343Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/19/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -262,8 +383,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
