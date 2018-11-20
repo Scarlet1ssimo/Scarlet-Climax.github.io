@@ -1097,7 +1097,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #CD3333;
+  background: #cd3333;
 }
 .site-meta {
   margin: 0;
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff938b;
+  background: #9554c6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2744,7 +2744,7 @@ pre .javascript .function {
 .site-meta {
   padding: 20px 0;
   color: rgba(255,255,255,0.7);
-  background: #f00;
+  background: #cd3333;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
