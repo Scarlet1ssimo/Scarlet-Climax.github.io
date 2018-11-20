@@ -1097,7 +1097,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  background: #CD3333;
 }
 .site-meta {
   margin: 0;
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff0e;
+  background: #ff938b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1918,6 +1918,7 @@ pre .javascript .function {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
+  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
@@ -2743,7 +2744,7 @@ pre .javascript .function {
 .site-meta {
   padding: 20px 0;
   color: rgba(255,255,255,0.7);
-  background: #222;
+  background: #f00;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
