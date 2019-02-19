@@ -113,7 +113,7 @@
 <meta property="og:site_name" content="Scarlet Devil Mansion">
 <meta property="og:description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-19T07:58:51.611Z">
+<meta property="og:updated_time" content="2019-02-19T08:05:30.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="普及组DP练习">
 <meta name="twitter:description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
@@ -340,7 +340,7 @@
 <p>【51nod 1274】（求一个无向图的最长边权递增路径）按照边权排序，把边权相同的放在一组更新最长路答案。</p>
 <p>【51nod 1354】（求a的子序列使其积为k的个数）k不大，先罗出k的所有约数，在约数上进行背包dp。</p>
 <p>【51nod 1201】（将N分为若干个不同整数的和的划分方式）<code>dp[i][j]</code>表示用i个数拼成j的方案，考虑如下转移：<code>dp[i][j]=dp[i][j-i]+dp[i-1][j-i]</code>，表示原集合每个数+1，再确认是否加入1。</p>
-<p>【51nod 1052】（把数列划分成m个不相交子段，使得和最大）f[i][j]表示把前i个数分成j段的答案，<code>g[i][j]</code>表示把前i个数分成j段并且以i结尾。那么就可以大力转移了：<code>g[i][j]=max(g[i-1][j],f[i-1][j-1])+a[i]</code>表示把<code>a[i]</code>加入上一段或者作为新一段的头,<code>f[i][j]=max(f[i-1][j],g[i][j])</code>表示继承之前的答案或者采用新的答案。考虑f,g更新的先后顺序可以只用一维状态。</p>
+<p>【51nod 1052】（把数列划分成m个不相交子段，使得和最大）<code>f[i][j]</code>表示把前i个数分成j段的答案，<code>g[i][j]</code>表示把前i个数分成j段并且以i结尾。那么就可以大力转移了：<code>g[i][j]=max(g[i-1][j],f[i-1][j-1])+a[i]</code>表示把<code>a[i]</code>加入上一段或者作为新一段的头,<code>f[i][j]=max(f[i-1][j],g[i][j])</code>表示继承之前的答案或者采用新的答案。考虑f,g更新的先后顺序可以只用一维状态。</p>
 <p>【51nod 1406】（n个整数，输出其中和x相与之后结果仍为x的数的个数，x从1到10^6）子集和变换，%lych_cys</p>
 <p>【51nod 1376】（求LIS的数量）求LIS可以直接用权值树状数组做，查询小于<code>a[i]</code>的数的LIS，在<code>a[i]</code>上放置LIS长度。求数量顺便记录这个长度的LIS出现了几次，在树状数组里更新合并即可。</p>
 <p>【51nod 1084】（走两次的方格取数）这题神TM   n,m反过来读woc。<code>dp[s][i][j]</code>表示当前状态两路都走了s步，一个在i行，一个在j行。接下来就是大力傻逼转移：<code>dp[s][i][j]=dp[s][i][j]=max(dp[s-1][i][j],dp[s-1][i-1][j-1],dp[s-1][i][j-1],dp[s-1][i-1][j])+(i==j?a[i][s-i]:a[i][s-i]+a[j][s-j])</code></p>
