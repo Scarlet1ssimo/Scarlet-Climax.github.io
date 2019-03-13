@@ -559,6 +559,7 @@ pre code {
   text-shadow: none;
 }
 .highlight {
+  opacity: 0.8;
   border-radius: 1px;
 }
 .highlight pre {
@@ -1142,7 +1143,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  background: #cd3333;
 }
 .site-meta {
   margin: 0;
@@ -1158,7 +1159,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 40px;
   color: #fff;
-  background: #222;
+  background: #cd3333;
   border-bottom: none;
 }
 .brand:hover {
@@ -1887,7 +1888,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e00ad1;
+  background: #ff60ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2558,7 +2559,7 @@ ul.breadcrumb li+li:last-child {
   overflow: hidden;
   padding: 0;
   width: 240px;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
 }
@@ -2604,7 +2605,7 @@ ul.breadcrumb li+li:last-child {
   box-sizing: border-box;
   padding: 40px;
   width: calc(100% - 252px);
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   min-height: 700px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
@@ -2680,8 +2681,8 @@ ul.breadcrumb li+li:last-child {
 }
 .site-meta {
   padding: 20px 0;
-  color: #fff;
-  background: #222;
+  color: rgba(255,255,255,0.7);
+  background: #cd3333;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
@@ -2698,7 +2699,7 @@ ul.breadcrumb li+li:last-child {
   background: none;
 }
 .brand:hover {
-  color: #fff;
+  color: rgba(255,255,255,0.7);
 }
 .site-subtitle {
   margin: 10px 10px 0;
@@ -2733,15 +2734,11 @@ ul.breadcrumb li+li:last-child {
     display: block !important;
   }
 }
-.menu-item-active a,
-.menu .menu-item a:hover,
-.menu .menu-item span.exturl:hover {
+.menu-item-active a {
   background: #f9f9f9;
   border-bottom-color: #fff;
 }
-.menu-item-active a:after,
-.menu .menu-item a:hover:after,
-.menu .menu-item span.exturl:hover:after {
+.menu-item-active a:after {
   content: " ";
   position: absolute;
   top: 50%;
@@ -2767,6 +2764,11 @@ ul.breadcrumb li+li:last-child {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+}
+.menu .menu-item a:hover,
+.menu .menu-item span.exturl:hover {
+  background: #f9f9f9;
+  border-bottom-color: rgba(255,255,255,0.7);
 }
 @media (hover: none) {
   .menu .menu-item a:hover,
@@ -2853,7 +2855,7 @@ ul.breadcrumb li+li:last-child {
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
   opacity: 0;
@@ -3013,7 +3015,7 @@ ul.breadcrumb li+li:last-child {
 }
 .post-block {
   padding: 40px;
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
 }
@@ -3185,4 +3187,12 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("/images/BbG.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  background-size: auto 100%;
+  background-position: top right;
 }
