@@ -2,15 +2,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next gemini use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#ff2a2a">
 
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,102 +45,43 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  
-  
-  
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
 
-  
-    
-    
-  
 
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
 
-  
 
-  
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
 
-  
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#ff2a2a">
 
 
 
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="雾,">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="如何自己骗自己般地用keras做一个Super Resolution">
-<meta name="keywords" content="雾">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SRCNN">
-<meta property="og:url" content="http://yoursite.com/2019/03/04/SRCNN/index.html">
-<meta property="og:site_name" content="Scarlet Devil Mansion">
-<meta property="og:description" content="如何自己骗自己般地用keras做一个Super Resolution">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-03T17:04:00.807Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SRCNN">
-<meta name="twitter:description" content="如何自己骗自己般地用keras做一个Super Resolution">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -145,14 +93,40 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="如何自己骗自己般地用keras做一个Super Resolution">
+<meta name="keywords" content="雾">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SRCNN">
+<meta property="og:url" content="http://yoursite.com/2019/03/04/SRCNN/index.html">
+<meta property="og:site_name" content="Scarlet Devil Mansion">
+<meta property="og:description" content="如何自己骗自己般地用keras做一个Super Resolution">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-03T17:04:00.807Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SRCNN">
+<meta name="twitter:description" content="如何自己骗自己般地用keras做一个Super Resolution">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2019/03/04/SRCNN/">
 
 
 
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>SRCNN | Scarlet Devil Mansion</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>SRCNN | Scarlet Devil Mansion</title>
   
 
 
@@ -162,9 +136,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -176,7 +179,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -186,13 +189,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">Scarlet什么都不会</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -200,35 +206,52 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -236,12 +259,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -254,6 +288,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -263,7 +299,7 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scarlet-Climax">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Scarlet什么都不会">
       <meta itemprop="image" content="/images/gravator.jpg">
     </span>
 
@@ -276,31 +312,46 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SRCNN</h1>
+          <h1 class="post-title" itemprop="name headline">SRCNN
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-04T01:01:41+08:00">
-                2019-03-04
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-04 01:01:41 / 修改时间：01:04:00" itemprop="dateCreated datePublished" datetime="2019-03-04T01:01:41+08:00">2019-03-04</time>
             
 
             
+              
 
+              
             
           </span>
 
           
 
           
+            
             
           
 
@@ -328,36 +379,52 @@
       
         <p>如何自己骗自己般地用keras做一个Super Resolution</p>
 <a id="more"></a>
-<h2 id="获取数据集"><a href="#获取数据集" class="headerlink" title="获取数据集"></a>获取数据集</h2><p>其实自己找也完全没有问题</p>
-<h3 id="训练与测试"><a href="#训练与测试" class="headerlink" title="训练与测试"></a>训练与测试</h3><blockquote>
-<p>  Specically, the training set consists of 91 images. The Set5 [2] (5 images) is used to evaluate the performance of upscaling factors 2, 3, and 4, and Set14 [28] (14 images) is used to evaluate the upscaling factor 3.</p>
+<h2 id="获取数据集"><a class="markdownIt-Anchor" href="#获取数据集"></a> 获取数据集</h2>
+<p>其实自己找也完全没有问题</p>
+<h3 id="训练与测试"><a class="markdownIt-Anchor" href="#训练与测试"></a> 训练与测试</h3>
+<blockquote>
+<p>Specically, the training set consists of 91 images. The Set5 [2] (5 images) is used to evaluate the performance of upscaling factors 2, 3, and 4, and Set14 [28] (14 images) is used to evaluate the upscaling factor 3.</p>
 </blockquote>
-<p>训练图片：91张图片<br>测试图片：Set5和Set14</p>
-<h3 id="导入图片"><a href="#导入图片" class="headerlink" title="导入图片"></a>导入图片</h3><p>从训练图片中获得训练训练集<br>详见代码，基本都是opencv2</p>
-<h3 id="裁剪图片"><a href="#裁剪图片" class="headerlink" title="裁剪图片"></a>裁剪图片</h3><blockquote>
-<p>  The sub-images are extracted from original images with a stride of 14.</p>
+<p>训练图片：91张图片<br>
+测试图片：Set5和Set14</p>
+<h3 id="导入图片"><a class="markdownIt-Anchor" href="#导入图片"></a> 导入图片</h3>
+<p>从训练图片中获得训练训练集<br>
+详见代码，基本都是opencv2</p>
+<h3 id="裁剪图片"><a class="markdownIt-Anchor" href="#裁剪图片"></a> 裁剪图片</h3>
+<blockquote>
+<p>The sub-images are extracted from original images with a stride of 14.</p>
 </blockquote>
 <p>先把图片resize小再resize回去，得到低分辨率的图</p>
 <p>对每张图片以14px为跨度，33px*33px为大小，裁剪得到训练集</p>
-<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>论文：</p>
+<h2 id="预处理"><a class="markdownIt-Anchor" href="#预处理"></a> 预处理</h2>
+<p>论文：</p>
 <blockquote>
-<p>  To synthesize the low-resolution samples {Yi}, we blur a sub-image by a proper Gaussian kernel, sub-sample it by the upscaling factor, and upscale it by the same factor via bicubic interpolation.</p>
+<p>To synthesize the low-resolution samples {Yi}, we blur a sub-image by a proper Gaussian kernel, sub-sample it by the upscaling factor, and upscale it by the same factor via bicubic interpolation.</p>
 </blockquote>
 <p>对于sample图还需要高斯模糊。其实是让模型能把模糊的图搞得更清晰，变相增加了学习强度</p>
-<h3 id="高斯模糊"><a href="#高斯模糊" class="headerlink" title="高斯模糊"></a>高斯模糊</h3><p>cv2.GaussianBlur大法好</p>
-<h3 id="bicubic"><a href="#bicubic" class="headerlink" title="bicubic"></a>bicubic</h3><p>cv2.resize大法好</p>
-<h2 id="模型搭建"><a href="#模型搭建" class="headerlink" title="模型搭建"></a>模型搭建</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">model</span><span class="params">()</span>:</span></span><br><span class="line">    SRCNN = keras.Sequential()</span><br><span class="line">    SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">128</span>,</span><br><span class="line">        kernel_size=<span class="number">9</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,</span><br><span class="line">        activation=<span class="string">'relu'</span>,</span><br><span class="line">        input_shape=(imp.patch_size, imp.patch_size, <span class="number">1</span>)</span><br><span class="line">    ))</span><br><span class="line">    SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">64</span>,</span><br><span class="line">        kernel_size=<span class="number">3</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'same'</span>,</span><br><span class="line">        activation=<span class="string">'relu'</span></span><br><span class="line">    ))</span><br><span class="line">    SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">1</span>,</span><br><span class="line">        kernel_size=<span class="number">5</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,</span><br><span class="line">        activation=<span class="string">'linear'</span></span><br><span class="line">    ))</span><br><span class="line">    SRCNN.compile(optimizer=keras.optimizers.Adam(lr=<span class="number">0.0003</span>), loss=<span class="string">'mean_squared_error'</span>,</span><br><span class="line">                  metrics=[<span class="string">'mean_squared_error'</span>])</span><br><span class="line">    <span class="keyword">return</span> SRCNN</span><br></pre></td></tr></table></figure>
-<h3 id="设置层"><a href="#设置层" class="headerlink" title="设置层"></a>设置层</h3><p>根据神仙论文，我们总共有三层模型，全是CNN，详细原理见论文</p>
-<h4 id="卷积层1"><a href="#卷积层1" class="headerlink" title="卷积层1"></a>卷积层1</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">128</span>,</span><br><span class="line">        kernel_size=<span class="number">9</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,<span class="comment">#训练的时候no-padding</span></span><br><span class="line">        activation=<span class="string">'relu'</span>,</span><br><span class="line">        input_shape=(imp.patch_size, imp.patch_size, <span class="number">1</span>)</span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
+<h3 id="高斯模糊"><a class="markdownIt-Anchor" href="#高斯模糊"></a> 高斯模糊</h3>
+<p>cv2.GaussianBlur大法好</p>
+<h3 id="bicubic"><a class="markdownIt-Anchor" href="#bicubic"></a> bicubic</h3>
+<p>cv2.resize大法好</p>
+<h2 id="模型搭建"><a class="markdownIt-Anchor" href="#模型搭建"></a> 模型搭建</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">model</span><span class="params">()</span>:</span></span><br><span class="line">    SRCNN = keras.Sequential()</span><br><span class="line">    SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">128</span>,</span><br><span class="line">        kernel_size=<span class="number">9</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,</span><br><span class="line">        activation=<span class="string">'relu'</span>,</span><br><span class="line">        input_shape=(imp.patch_size, imp.patch_size, <span class="number">1</span>)</span><br><span class="line">    ))</span><br><span class="line">    SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">64</span>,</span><br><span class="line">        kernel_size=<span class="number">3</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'same'</span>,</span><br><span class="line">        activation=<span class="string">'relu'</span></span><br><span class="line">    ))</span><br><span class="line">    SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">1</span>,</span><br><span class="line">        kernel_size=<span class="number">5</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,</span><br><span class="line">        activation=<span class="string">'linear'</span></span><br><span class="line">    ))</span><br><span class="line">    SRCNN.compile(optimizer=keras.optimizers.Adam(lr=<span class="number">0.0003</span>), loss=<span class="string">'mean_squared_error'</span>,</span><br><span class="line">                  metrics=[<span class="string">'mean_squared_error'</span>])</span><br><span class="line">    <span class="keyword">return</span> SRCNN</span><br></pre></td></tr></table></figure>
+<h3 id="设置层"><a class="markdownIt-Anchor" href="#设置层"></a> 设置层</h3>
+<p>根据神仙论文，我们总共有三层模型，全是CNN，详细原理见论文</p>
+<h4 id="卷积层1"><a class="markdownIt-Anchor" href="#卷积层1"></a> 卷积层1</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">128</span>,</span><br><span class="line">        kernel_size=<span class="number">9</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,<span class="comment">#训练的时候no-padding</span></span><br><span class="line">        activation=<span class="string">'relu'</span>,</span><br><span class="line">        input_shape=(imp.patch_size, imp.patch_size, <span class="number">1</span>)</span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
 <p>大致操作：池化，通过9*9的patch来把图形卷成一维向量</p>
-<h4 id="卷积层2"><a href="#卷积层2" class="headerlink" title="卷积层2"></a>卷积层2</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">64</span>,</span><br><span class="line">        kernel_size=<span class="number">3</span>,<span class="comment">#说实话，这里效果不明显，配置不太行的建议学论文改为1</span></span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'same'</span>,</span><br><span class="line">        activation=<span class="string">'relu'</span></span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
+<h4 id="卷积层2"><a class="markdownIt-Anchor" href="#卷积层2"></a> 卷积层2</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">64</span>,</span><br><span class="line">        kernel_size=<span class="number">3</span>,<span class="comment">#说实话，这里效果不明显，配置不太行的建议学论文改为1</span></span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'same'</span>,</span><br><span class="line">        activation=<span class="string">'relu'</span></span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
 <p>大致操作：把一维向量缩小（加强非线性</p>
-<h4 id="卷积层3"><a href="#卷积层3" class="headerlink" title="卷积层3"></a>卷积层3</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">1</span>,</span><br><span class="line">        kernel_size=<span class="number">5</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,<span class="comment">#训练的时候no-padding</span></span><br><span class="line">        activation=<span class="string">'linear'</span></span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
+<h4 id="卷积层3"><a class="markdownIt-Anchor" href="#卷积层3"></a> 卷积层3</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.add(keras.layers.Convolution2D(</span><br><span class="line">        filters=<span class="number">1</span>,</span><br><span class="line">        kernel_size=<span class="number">5</span>,</span><br><span class="line">        strides=<span class="number">1</span>,</span><br><span class="line">        padding=<span class="string">'valid'</span>,<span class="comment">#训练的时候no-padding</span></span><br><span class="line">        activation=<span class="string">'linear'</span></span><br><span class="line">    ))</span><br></pre></td></tr></table></figure>
 <p>大致操作：把一维向量卷回成一个5*5的小patch</p>
 <p>keras的卷积层在最后似乎自动把小patch合并成了输出图像，有点nb，不是很懂</p>
-<h3 id="编译模型"><a href="#编译模型" class="headerlink" title="编译模型"></a>编译模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.compile(optimizer=keras.optimizers.Adam(lr=<span class="number">0.0003</span>), loss=<span class="string">'mean_squared_error'</span>,</span><br><span class="line">                  metrics=[<span class="string">'mean_squared_error'</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="编译模型"><a class="markdownIt-Anchor" href="#编译模型"></a> 编译模型</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SRCNN.compile(optimizer=keras.optimizers.Adam(lr=<span class="number">0.0003</span>), loss=<span class="string">'mean_squared_error'</span>,</span><br><span class="line">                  metrics=[<span class="string">'mean_squared_error'</span>])</span><br></pre></td></tr></table></figure>
 <p>因为PSNR是和mse相关的，所以这里用mse作为损失函数和监督</p>
-<h2 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h2><p>又到了8说了开冲时间</p>
+<h2 id="训练模型"><a class="markdownIt-Anchor" href="#训练模型"></a> 训练模型</h2>
+<p>又到了8说了开冲时间</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span><span class="params">()</span>:</span></span><br><span class="line">    SRCNN = model()</span><br><span class="line">    print(SRCNN.summary())</span><br><span class="line">    data, label = imp.load(imp.PATH)</span><br><span class="line">    val_data, val_label = imp.load(imp.TEST)</span><br><span class="line">    checkpoint = keras.callbacks.ModelCheckpoint(imp.NMD, monitor=<span class="string">'val_loss'</span>, verbose=<span class="number">1</span>, save_best_only=<span class="keyword">True</span>, save_weights_only=<span class="keyword">False</span>, mode=<span class="string">'min'</span>)</span><br><span class="line">    callbacks_list = [checkpoint]</span><br><span class="line"></span><br><span class="line">    SRCNN.fit(data, label, batch_size=<span class="number">128</span>, validation_data=(val_data, val_label),</span><br><span class="line">              callbacks=callbacks_list, shuffle=<span class="keyword">True</span>, nb_epoch=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
 <p>学到的技巧：</p>
 <ul>
@@ -366,18 +433,26 @@
 <li>代码中的checkpoint自动保存在测试集上效果最优的模型</li>
 </ul>
 <p>还没搞懂callback和batch机制QAQ</p>
-<h2 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h2><p>操作：代码中实现的方法是受padding影响的部分用bicubic填充（也就是把模型跑出来的结果贴到resize后的中间部分。。）</p>
+<h2 id="评估"><a class="markdownIt-Anchor" href="#评估"></a> 评估</h2>
+<p>操作：代码中实现的方法是受padding影响的部分用bicubic填充（也就是把模型跑出来的结果贴到resize后的中间部分。。）</p>
 <p>评估也说不出来啥，反正放大的效果挺好，就是不知道为什么Keras会被0.6M的图卡爆内存qwq</p>
-<h2 id="魔改时间"><a href="#魔改时间" class="headerlink" title="魔改时间"></a>魔改时间</h2><p>莫得魔改（素质极差</p>
+<h2 id="魔改时间"><a class="markdownIt-Anchor" href="#魔改时间"></a> 魔改时间</h2>
+<p>莫得魔改（素质极差</p>
 
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -423,17 +498,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -453,7 +521,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -461,67 +528,83 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/gravator.jpg" alt="Scarlet-Climax">
             
               <p class="site-author-name" itemprop="name">Scarlet-Climax</p>
-              <p class="site-description motion-element" itemprop="description">Scarlet什么都不会</p>
+              <div class="site-description motion-element" itemprop="description">Scarlet什么都不会</div>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">tags</span>
+                  <a href="/archives/">
                 
-              </div>
-            
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-          </nav>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/Scarlet-Climax" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i></a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Scarlet-Climax" title="GitHub &rarr; https://github.com/Scarlet-Climax" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
             </div>
           
 
-          
           
 
           
@@ -534,15 +617,15 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://boyanzh.github.io/" title="bmm" target="_blank">bmm</a>
+                    <a href="https://boyanzh.github.io/" title="https://boyanzh.github.io/" rel="noopener" target="_blank">bmm</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://github.com/zyayoung" title="yaa" target="_blank">yaa</a>
+                    <a href="https://github.com/zyayoung" title="https://github.com/zyayoung" rel="noopener" target="_blank">yaa</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://github.com/XYPB" title="XYPB" target="_blank">XYPB</a>
+                    <a href="https://github.com/XYPB" title="https://github.com/XYPB" rel="noopener" target="_blank">XYPB</a>
                   </li>
                 
               </ul>
@@ -550,25 +633,29 @@
           
 
           
+            
+          
+          
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据集"><span class="nav-text">获取数据集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#训练与测试"><span class="nav-text">训练与测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入图片"><span class="nav-text">导入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#裁剪图片"><span class="nav-text">裁剪图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预处理"><span class="nav-text">预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯模糊"><span class="nav-text">高斯模糊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bicubic"><span class="nav-text">bicubic</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型搭建"><span class="nav-text">模型搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置层"><span class="nav-text">设置层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层1"><span class="nav-text">卷积层1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层2"><span class="nav-text">卷积层2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层3"><span class="nav-text">卷积层3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译模型"><span class="nav-text">编译模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练模型"><span class="nav-text">训练模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评估"><span class="nav-text">评估</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#魔改时间"><span class="nav-text">魔改时间</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据集"><span class="nav-text"> 获取数据集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#训练与测试"><span class="nav-text"> 训练与测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入图片"><span class="nav-text"> 导入图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#裁剪图片"><span class="nav-text"> 裁剪图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预处理"><span class="nav-text"> 预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#高斯模糊"><span class="nav-text"> 高斯模糊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bicubic"><span class="nav-text"> bicubic</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型搭建"><span class="nav-text"> 模型搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置层"><span class="nav-text"> 设置层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层1"><span class="nav-text"> 卷积层1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层2"><span class="nav-text"> 卷积层2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卷积层3"><span class="nav-text"> 卷积层3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译模型"><span class="nav-text"> 编译模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练模型"><span class="nav-text"> 训练模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评估"><span class="nav-text"> 评估</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#魔改时间"><span class="nav-text"> 魔改时间</span></a></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -576,6 +663,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -584,17 +672,19 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Scarlet-Climax</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -602,12 +692,13 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
 
 
 
 
         
+
 
 
 
@@ -628,11 +719,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -646,103 +740,11 @@
 
 
 
-  
 
 
 
 
 
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 
@@ -756,7 +758,63 @@
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
 
 
 
@@ -766,37 +824,20 @@
   
 
   
-
-  
   
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+    
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+  
+    <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css"><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -814,7 +855,32 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+  
 
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 

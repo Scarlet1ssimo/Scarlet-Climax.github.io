@@ -2,15 +2,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next gemini use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#ff2a2a">
 
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,102 +45,43 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  
-  
-  
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
 
-  
-    
-    
-  
 
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
 
-  
 
-  
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
 
-  
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#ff2a2a">
 
 
 
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="雾,">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型">
-<meta name="keywords" content="雾">
-<meta property="og:type" content="article">
-<meta property="og:title" content="跑例程一时爽，一直跑例程一直爽">
-<meta property="og:url" content="http://yoursite.com/2019/03/03/跑例程一时爽，一直跑例程一直爽/index.html">
-<meta property="og:site_name" content="Scarlet Devil Mansion">
-<meta property="og:description" content="这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-03T17:03:29.430Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跑例程一时爽，一直跑例程一直爽">
-<meta name="twitter:description" content="这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -145,14 +93,40 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型">
+<meta name="keywords" content="雾">
+<meta property="og:type" content="article">
+<meta property="og:title" content="跑例程一时爽，一直跑例程一直爽">
+<meta property="og:url" content="http://yoursite.com/2019/03/03/跑例程一时爽，一直跑例程一直爽/index.html">
+<meta property="og:site_name" content="Scarlet Devil Mansion">
+<meta property="og:description" content="这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-03T17:03:29.430Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="跑例程一时爽，一直跑例程一直爽">
+<meta name="twitter:description" content="这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2019/03/03/跑例程一时爽，一直跑例程一直爽/">
 
 
 
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>跑例程一时爽，一直跑例程一直爽 | Scarlet Devil Mansion</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>跑例程一时爽，一直跑例程一直爽 | Scarlet Devil Mansion</title>
   
 
 
@@ -162,9 +136,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -176,7 +179,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -186,13 +189,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">Scarlet什么都不会</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -200,35 +206,52 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -236,12 +259,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -254,6 +288,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -263,7 +299,7 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scarlet-Climax">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Scarlet什么都不会">
       <meta itemprop="image" content="/images/gravator.jpg">
     </span>
 
@@ -276,31 +312,58 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">跑例程一时爽，一直跑例程一直爽</h1>
+          <h1 class="post-title" itemprop="name headline">跑例程一时爽，一直跑例程一直爽
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-03T02:22:28+08:00">
-                2019-03-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-03 02:22:28" itemprop="dateCreated datePublished" datetime="2019-03-03T02:22:28+08:00">2019-03-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-04 01:03:29" itemprop="dateModified" datetime="2019-03-04T01:03:29+08:00">2019-03-04</time>
+              
             
           </span>
 
           
 
           
+            
             
           
 
@@ -328,11 +391,15 @@
       
         <p>这篇文章教你怎么用keras来XJB搭一个（对服饰图像分类的）MNIST模型</p>
 <a id="more"></a>
-<h2 id="导入tf库"><a href="#导入tf库" class="headerlink" title="导入tf库"></a>导入tf库</h2><p>首先是导入tensorflow和keras</p>
+<h2 id="导入tf库"><a class="markdownIt-Anchor" href="#导入tf库"></a> 导入tf库</h2>
+<p>首先是导入tensorflow和keras</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
-<h2 id="获取数据集"><a href="#获取数据集" class="headerlink" title="获取数据集"></a>获取数据集</h2><p>然后我们从指定地点获取训练集和测试集</p>
+<h2 id="获取数据集"><a class="markdownIt-Anchor" href="#获取数据集"></a> 获取数据集</h2>
+<p>然后我们从指定地点获取训练集和测试集</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fashion_mnist = keras.datasets.fashion_mnist</span><br><span class="line"></span><br><span class="line">(train_images, train_labels), (test_images,</span><br><span class="line">                               test_labels) = fashion_mnist.load_data()</span><br></pre></td></tr></table></figure>
-<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><h3 id="标签映射"><a href="#标签映射" class="headerlink" title="标签映射"></a>标签映射</h3><p>训练集中的标签只是0-9的数字（见下表），所以需要一个映射来看懂数字指的是什么服饰</p>
+<h2 id="预处理"><a class="markdownIt-Anchor" href="#预处理"></a> 预处理</h2>
+<h3 id="标签映射"><a class="markdownIt-Anchor" href="#标签映射"></a> 标签映射</h3>
+<p>训练集中的标签只是0-9的数字（见下表），所以需要一个映射来看懂数字指的是什么服饰</p>
 <table>
 <thead>
 <tr>
@@ -384,10 +451,14 @@
 </tbody>
 </table>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class_names = [<span class="string">'T-shirt/top'</span>, <span class="string">'Trouser'</span>, <span class="string">'Pullover'</span>, <span class="string">'Dress'</span>, <span class="string">'Coat'</span>,</span><br><span class="line">               <span class="string">'Sandal'</span>, <span class="string">'Shirt'</span>, <span class="string">'Sneaker'</span>, <span class="string">'Bag'</span>, <span class="string">'Ankle boot'</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3><p>康一眼图像，发现像素值介于0到255之间：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.imshow(train_images[<span class="number">0</span>])</span><br><span class="line">plt.colorbar()</span><br><span class="line">plt.grid(<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="数据处理"><a class="markdownIt-Anchor" href="#数据处理"></a> 数据处理</h3>
+<p>康一眼图像，发现像素值介于0到255之间：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plt.figure()</span><br><span class="line">plt.imshow(train_images[<span class="number">0</span>])</span><br><span class="line">plt.colorbar()</span><br><span class="line">plt.grid(<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
 <p>那么就要把他们缩小到0到1之间</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">train_images = train_images / <span class="number">255.0</span></span><br><span class="line">test_images = test_images / <span class="number">255.0</span></span><br></pre></td></tr></table></figure>
-<h2 id="模型搭建"><a href="#模型搭建" class="headerlink" title="模型搭建"></a>模型搭建</h2><h3 id="设置层"><a href="#设置层" class="headerlink" title="设置层"></a>设置层</h3><p>啥都别说，先看模型</p>
+<h2 id="模型搭建"><a class="markdownIt-Anchor" href="#模型搭建"></a> 模型搭建</h2>
+<h3 id="设置层"><a class="markdownIt-Anchor" href="#设置层"></a> 设置层</h3>
+<p>啥都别说，先看模型</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model = keras.Sequential([</span><br><span class="line">    keras.layers.Flatten(input_shape=(<span class="number">28</span>, <span class="number">28</span>)),</span><br><span class="line">    keras.layers.Dense(<span class="number">128</span>, activation=tf.nn.relu),</span><br><span class="line">    keras.layers.Dense(<span class="number">10</span>, activation=tf.nn.softmax)</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
 <p>大概可以看出来，我们这个模型有三层</p>
 <ol>
@@ -395,24 +466,38 @@
 <li>第二层相当于构建一个128个神经元（感知器，以ReLU为激活函数）的全连接层</li>
 <li>第三层相当于构建一个具有10个概率得分的数组，其和为1</li>
 </ol>
-<h3 id="编译模型"><a href="#编译模型" class="headerlink" title="编译模型"></a>编译模型</h3><p>训练前再设置几个属性</p>
+<h3 id="编译模型"><a class="markdownIt-Anchor" href="#编译模型"></a> 编译模型</h3>
+<p>训练前再设置几个属性</p>
 <ul>
 <li>损失函数：描述准确率，这里是交叉熵</li>
 <li>优化器：根据模型看到的数据及其损失函数更新模型的方式，这里是Adam</li>
 <li>指标：用于监控训练和测试步骤，这里是准确率</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">model.compile(optimizer=tf.train.AdamOptimizer(),</span><br><span class="line">              loss=<span class="string">'sparse_categorical_crossentropy'</span>,</span><br><span class="line">              metrics=[<span class="string">'accuracy'</span>])</span><br></pre></td></tr></table></figure>
-<h2 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h2><p>8说了，开冲</p>
+<h2 id="训练模型"><a class="markdownIt-Anchor" href="#训练模型"></a> 训练模型</h2>
+<p>8说了，开冲</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(train_images, train_labels, epochs=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="评估准确率"><a href="#评估准确率" class="headerlink" title="评估准确率"></a>评估准确率</h2><p>看看测试集在模型上的表现</p>
+<h2 id="评估准确率"><a class="markdownIt-Anchor" href="#评估准确率"></a> 评估准确率</h2>
+<p>看看测试集在模型上的表现</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test_loss, test_acc = model.evaluate(test_images, test_labels)</span><br><span class="line">print(<span class="string">'Test accuracy:'</span>, test_acc)</span><br></pre></td></tr></table></figure>
-<h2 id="学（mo）习（gai）时间"><a href="#学（mo）习（gai）时间" class="headerlink" title="学（mo）习（gai）时间"></a>学（mo）习（gai）时间</h2><h3 id="改epochs"><a href="#改epochs" class="headerlink" title="改epochs"></a>改epochs</h3><p>先试了一下训练20个epochs：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(train_images, train_labels, epochs=<span class="number">20</span>)</span><br></pre></td></tr></table></figure></p>
-<p>效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">Epoch 20/20</span><br><span class="line">60000/60000 [==============================] - 2s 30us/step - loss: 0.1791 - acc: 0.9329</span><br><span class="line">10000/10000 [==============================] - 0s 18us/step</span><br><span class="line">Test accuracy: 0.888</span><br></pre></td></tr></table></figure></p>
-<h3 id="改模型层数"><a href="#改模型层数" class="headerlink" title="改模型层数"></a>改模型层数</h3><p>多加一层128个感知器的全连接层<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">model = keras.Sequential([</span><br><span class="line">    keras.layers.Flatten(input_shape=(<span class="number">28</span>, <span class="number">28</span>)),</span><br><span class="line">    keras.layers.Dense(<span class="number">128</span>, activation=tf.nn.relu),</span><br><span class="line">	keras.layers.Dense(<span class="number">128</span>, activation=tf.nn.relu),</span><br><span class="line">    keras.layers.Dense(<span class="number">10</span>, activation=tf.nn.softmax)</span><br><span class="line">])</span><br></pre></td></tr></table></figure></p>
-<p>效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Epoch 5/5</span><br><span class="line">60000/60000 [==============================] - 2s 36us/step - loss: 0.2869 - acc: 0.8938</span><br><span class="line">10000/10000 [==============================] - 0s 21us/step</span><br><span class="line">Test accuracy: 0.8736</span><br></pre></td></tr></table></figure></p>
-<h3 id="改感知器个数"><a href="#改感知器个数" class="headerlink" title="改感知器个数"></a>改感知器个数</h3><p>把中间层改成512个感知器<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model = keras.Sequential([</span><br><span class="line">    keras.layers.Flatten(input_shape=(<span class="number">28</span>, <span class="number">28</span>)),</span><br><span class="line">    keras.layers.Dense(<span class="number">512</span>, activation=tf.nn.relu),</span><br><span class="line">    keras.layers.Dense(<span class="number">10</span>, activation=tf.nn.softmax)</span><br><span class="line">])</span><br></pre></td></tr></table></figure></p>
-<p>效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Epoch 5/5</span><br><span class="line">60000/60000 [==============================] - 5s 80us/step - loss: 0.2825 - acc: 0.8951</span><br><span class="line">10000/10000 [==============================] - 0s 34us/step</span><br><span class="line">Test accuracy: 0.8762</span><br></pre></td></tr></table></figure></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<h2 id="学mo习gai时间"><a class="markdownIt-Anchor" href="#学mo习gai时间"></a> 学（mo）习（gai）时间</h2>
+<h3 id="改epochs"><a class="markdownIt-Anchor" href="#改epochs"></a> 改epochs</h3>
+<p>先试了一下训练20个epochs：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(train_images, train_labels, epochs=<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">Epoch 20/20</span><br><span class="line">60000/60000 [==============================] - 2s 30us/step - loss: 0.1791 - acc: 0.9329</span><br><span class="line">10000/10000 [==============================] - 0s 18us/step</span><br><span class="line">Test accuracy: 0.888</span><br></pre></td></tr></table></figure>
+<h3 id="改模型层数"><a class="markdownIt-Anchor" href="#改模型层数"></a> 改模型层数</h3>
+<p>多加一层128个感知器的全连接层</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">model = keras.Sequential([</span><br><span class="line">    keras.layers.Flatten(input_shape=(<span class="number">28</span>, <span class="number">28</span>)),</span><br><span class="line">    keras.layers.Dense(<span class="number">128</span>, activation=tf.nn.relu),</span><br><span class="line">	keras.layers.Dense(<span class="number">128</span>, activation=tf.nn.relu),</span><br><span class="line">    keras.layers.Dense(<span class="number">10</span>, activation=tf.nn.softmax)</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Epoch 5/5</span><br><span class="line">60000/60000 [==============================] - 2s 36us/step - loss: 0.2869 - acc: 0.8938</span><br><span class="line">10000/10000 [==============================] - 0s 21us/step</span><br><span class="line">Test accuracy: 0.8736</span><br></pre></td></tr></table></figure>
+<h3 id="改感知器个数"><a class="markdownIt-Anchor" href="#改感知器个数"></a> 改感知器个数</h3>
+<p>把中间层改成512个感知器</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model = keras.Sequential([</span><br><span class="line">    keras.layers.Flatten(input_shape=(<span class="number">28</span>, <span class="number">28</span>)),</span><br><span class="line">    keras.layers.Dense(<span class="number">512</span>, activation=tf.nn.relu),</span><br><span class="line">    keras.layers.Dense(<span class="number">10</span>, activation=tf.nn.softmax)</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Epoch 5/5</span><br><span class="line">60000/60000 [==============================] - 5s 80us/step - loss: 0.2825 - acc: 0.8951</span><br><span class="line">10000/10000 [==============================] - 0s 34us/step</span><br><span class="line">Test accuracy: 0.8762</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h3>
+<ul>
 <li>改epochs：慢，nb</li>
 <li>改模型层数：快，菜</li>
 <li>改模型大小：稍慢，还行</li>
@@ -424,12 +509,18 @@
 
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -479,17 +570,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -509,7 +593,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -517,67 +600,83 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/gravator.jpg" alt="Scarlet-Climax">
             
               <p class="site-author-name" itemprop="name">Scarlet-Climax</p>
-              <p class="site-description motion-element" itemprop="description">Scarlet什么都不会</p>
+              <div class="site-description motion-element" itemprop="description">Scarlet什么都不会</div>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">tags</span>
+                  <a href="/archives/">
                 
-              </div>
-            
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-          </nav>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/Scarlet-Climax" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i></a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Scarlet-Climax" title="GitHub &rarr; https://github.com/Scarlet-Climax" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
             </div>
           
 
-          
           
 
           
@@ -590,15 +689,15 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://boyanzh.github.io/" title="bmm" target="_blank">bmm</a>
+                    <a href="https://boyanzh.github.io/" title="https://boyanzh.github.io/" rel="noopener" target="_blank">bmm</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://github.com/zyayoung" title="yaa" target="_blank">yaa</a>
+                    <a href="https://github.com/zyayoung" title="https://github.com/zyayoung" rel="noopener" target="_blank">yaa</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://github.com/XYPB" title="XYPB" target="_blank">XYPB</a>
+                    <a href="https://github.com/XYPB" title="https://github.com/XYPB" rel="noopener" target="_blank">XYPB</a>
                   </li>
                 
               </ul>
@@ -606,25 +705,29 @@
           
 
           
+            
+          
+          
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入tf库"><span class="nav-text">导入tf库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据集"><span class="nav-text">获取数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预处理"><span class="nav-text">预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标签映射"><span class="nav-text">标签映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据处理"><span class="nav-text">数据处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型搭建"><span class="nav-text">模型搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置层"><span class="nav-text">设置层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译模型"><span class="nav-text">编译模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练模型"><span class="nav-text">训练模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评估准确率"><span class="nav-text">评估准确率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学（mo）习（gai）时间"><span class="nav-text">学（mo）习（gai）时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改epochs"><span class="nav-text">改epochs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改模型层数"><span class="nav-text">改模型层数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改感知器个数"><span class="nav-text">改感知器个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入tf库"><span class="nav-text"> 导入tf库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数据集"><span class="nav-text"> 获取数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预处理"><span class="nav-text"> 预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标签映射"><span class="nav-text"> 标签映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据处理"><span class="nav-text"> 数据处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型搭建"><span class="nav-text"> 模型搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置层"><span class="nav-text"> 设置层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编译模型"><span class="nav-text"> 编译模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练模型"><span class="nav-text"> 训练模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#评估准确率"><span class="nav-text"> 评估准确率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学mo习gai时间"><span class="nav-text"> 学（mo）习（gai）时间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改epochs"><span class="nav-text"> 改epochs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改模型层数"><span class="nav-text"> 改模型层数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改感知器个数"><span class="nav-text"> 改感知器个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text"> 总结</span></a></li></ol></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -632,6 +735,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -640,17 +744,19 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Scarlet-Climax</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -658,12 +764,13 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
 
 
 
 
         
+
 
 
 
@@ -684,11 +791,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -702,103 +812,11 @@
 
 
 
-  
 
 
 
 
 
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 
@@ -812,7 +830,63 @@
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
 
 
 
@@ -822,37 +896,20 @@
   
 
   
-
-  
   
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+    
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+  
+    <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css"><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -870,7 +927,32 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+  
 
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 

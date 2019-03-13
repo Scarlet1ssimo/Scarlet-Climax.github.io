@@ -2,15 +2,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next gemini use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#ff2a2a">
 
 
 
@@ -20,8 +29,6 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -38,102 +45,43 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
 
 
-  
-  
-  
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
 
-  
-    
-    
-  
 
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
 
-  
 
-  
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
 
-  
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#ff2a2a">
 
 
 
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="DP,">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
-<meta name="keywords" content="DP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="普及组DP练习">
-<meta property="og:url" content="http://yoursite.com/2019/02/19/普及组DP练习/index.html">
-<meta property="og:site_name" content="Scarlet Devil Mansion">
-<meta property="og:description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-19T08:05:30.078Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="普及组DP练习">
-<meta name="twitter:description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -145,14 +93,40 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
+<meta name="keywords" content="DP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="普及组DP练习">
+<meta property="og:url" content="http://yoursite.com/2019/02/19/普及组DP练习/index.html">
+<meta property="og:site_name" content="Scarlet Devil Mansion">
+<meta property="og:description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-19T08:05:30.078Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="普及组DP练习">
+<meta name="twitter:description" content="不会数数，来切51nod普及组dp。老司机莫喷QAQ。感觉51nod题目真友好 妈呀切不动51nod了，再回BZOJ看看。 听说ljx帮我放广告，那我也只能放回去了w【DP大师传送门】">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2019/02/19/普及组DP练习/">
 
 
 
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>普及组DP练习 | Scarlet Devil Mansion</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>普及组DP练习 | Scarlet Devil Mansion</title>
   
 
 
@@ -162,9 +136,38 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -176,7 +179,7 @@
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
@@ -186,13 +189,16 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">Scarlet什么都不会</p>
       
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -200,35 +206,52 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            Archives
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -236,12 +259,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -254,6 +288,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -263,7 +299,7 @@
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scarlet-Climax">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Scarlet什么都不会">
       <meta itemprop="image" content="/images/gravator.jpg">
     </span>
 
@@ -276,31 +312,46 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">普及组DP练习</h1>
+          <h1 class="post-title" itemprop="name headline">普及组DP练习
+
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-19T15:54:26+08:00">
-                2019-02-19
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-19 15:54:26 / 修改时间：16:05:30" itemprop="dateCreated datePublished" datetime="2019-02-19T15:54:26+08:00">2019-02-19</time>
             
 
             
+              
 
+              
             
           </span>
 
           
 
           
+            
             
           
 
@@ -330,12 +381,31 @@
 <p>妈呀切不动51nod了，再回BZOJ看看。</p>
 <p>听说ljx帮我放广告，那我也只能放回去了w【<a href="http://lujiaxin.is-programmer.com/posts/205441.html" target="_blank" rel="noopener">DP大师传送门</a>】</p>
 <a id="more"></a>
-<h2 id="51nod"><a href="#51nod" class="headerlink" title="51nod"></a>51nod</h2><p>【51nod 1009】（数1-x中数字0-9的个数）人生第一道数位DP，用数学方法计算1-i*10^k中各种数出现的次数，再计算对前面的数的贡献。做法似乎很傻逼以后在来看看有没有正常做法。</p>
+<h2 id="51nod"><a class="markdownIt-Anchor" href="#51nod"></a> 51nod</h2>
+<p>【51nod 1009】（数1-x中数字0-9的个数）人生第一道数位DP，用数学方法计算1-i*10^k中各种数出现的次数，再计算对前面的数的贡献。做法似乎很傻逼以后在来看看有没有正常做法。</p>
 <p>【51nod 1043】（1个长度为2N的数，如果左边N个数的和 = 右边N个数的和，那么就是一个幸运号码。求长度为2N的幸运号码的数量）后一半是没有前导零的限制的，所以可以大力背包。考虑前导零对背包计数的影响，发现就是少做了一次背包，减掉就好了。</p>
 <p>【51nod 1202】（求一个数列的不同子序列个数）若<code>a[i]</code>没有在之前出现，<code>dp[i]=dp[i-1]*2+1</code>，表示前面的序列加或者不加<code>a[i]</code>，或者新开一个以i为首的序列。若<code>a[i]</code>在之前出现了，用<code>pre[i]</code>表示上一个值为i的位置，<code>dp[i]=dp[i]*2-dp[pre[i]-1]</code>。</p>
 <p>【51nod 1412】（ALB树，是指左右子树高度差至多为1的二叉树，并且该树的左右两个子树也均为ALB树。 求恰好有n个节点的ALB树的个数）<code>dp[i][k]</code>表示i个节点，高为k的ALB树，发现k十分小（是log级的，不超过15），枚举右子树形态转移。</p>
-<p>【51nod 1259】（将N分为若干个整数的和的划分方式）好难，听说是<a href="http://blog.csdn.net/acdreamers/article/details/12259815" target="_blank" rel="noopener">五边形数定理</a>。【补：小于$\sqrt n$的数大力做完全背包，大于$\sqrt n$的数用【51nod 1201】的技巧。合并就好了，复杂度$O(n\sqrt n)$】</p>
-<p>【51nod 1296】（a是1-n的排列，现在钦点一些i使得<code>a[i]</code>大于其邻居或者钦点另一些j使得<code>a[j]</code>小于其邻居，求合法的排列a的个数）记<code>dp[i][j]</code>表示前i个数用1-i的排列且末尾为j的方案数。若钦点<code>a[i]&gt;a[i-1]</code>，$dp[i][j]=\sum_{k=1}^{j-1}dp[i-1][k]$表示枚举的k大于j，把&gt;=k的数+1。若钦点<code>a[i]&lt;a[i-1]</code>，$dp[i][j]=\sum_{k=j}^{i-1}dp[i-1][k]$表示枚举的k小于等于j，理解为把&gt;=k的数+1。没有限制则$dp[i][j]=\sum_{k=1}^{i-1}dp[i-1][k]$表示随便填数，前缀和优化。</p>
+<p>【51nod 1259】（将N分为若干个整数的和的划分方式）好难，听说是<a href="http://blog.csdn.net/acdreamers/article/details/12259815" target="_blank" rel="noopener">五边形数定理</a>。【补：小于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="padding-left:0.833em;">n</span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span>的数大力做完全背包，大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="padding-left:0.833em;">n</span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span>的数用【51nod 1201】的技巧。合并就好了，复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><msqrt><mi>n</mi></msqrt><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\sqrt n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.05028em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="padding-left:0.833em;">n</span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mclose">)</span></span></span></span>】</p>
+<p>【51nod 1296】（a是1-n的排列，现在钦点一些i使得<code>a[i]</code>大于其邻居或者钦点另一些j使得<code>a[j]</code>小于其邻居，求合法的排列a的个数）记<code>dp[i][j]</code>表示前i个数用1-i的排列且末尾为j的方案数。若钦点<code>a[i]&gt;a[i-1]</code>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>k</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i][j]=\sum_{k=1}^{j-1}dp[i-1][k]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.264274em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.964564em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029000000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span></span></span></span>表示枚举的k大于j，把&gt;=k的数+1。若钦点<code>a[i]&lt;a[i-1]</code>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mi>j</mi></mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>k</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i][j]=\sum_{k=j}^{i-1}dp[i-1][k]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.400382em;vertical-align:-0.43581800000000004em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.964564em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.43581800000000004em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span></span></span></span>表示枚举的k小于等于j，理解为把&gt;=k的数+1。没有限制则<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>k</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i][j]=\sum_{k=1}^{i-1}dp[i-1][k]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.264274em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.964564em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span></span></span></span>表示随便填数，前缀和优化。</p>
 <p>【51nod 1020】（求恰有k对逆序对的1-n排列的个数）<code>dp[i][k]</code>表示1-i排列中恰有k对逆序列的方案数，枚举第i位加入的数即可按照逆序对数转移，可用前缀和优化。</p>
 <p>【51nod 1274】（求一个无向图的最长边权递增路径）按照边权排序，把边权相同的放在一组更新最长路答案。</p>
 <p>【51nod 1354】（求a的子序列使其积为k的个数）k不大，先罗出k的所有约数，在约数上进行背包dp。</p>
@@ -346,23 +416,36 @@
 <p>【51nod 1084】（走两次的方格取数）这题神TM   n,m反过来读woc。<code>dp[s][i][j]</code>表示当前状态两路都走了s步，一个在i行，一个在j行。接下来就是大力傻逼转移：<code>dp[s][i][j]=dp[s][i][j]=max(dp[s-1][i][j],dp[s-1][i-1][j-1],dp[s-1][i][j-1],dp[s-1][i-1][j])+(i==j?a[i][s-i]:a[i][s-i]+a[j][s-j])</code></p>
 <p>【51nod 1055】（求从一个集合内选数的最长等差数列）把所有数排序，枚举<code>a[j]+a[k]=2*a[i]</code>中的i，发现j和k分布在i两侧，因为单调性，可以用双指针轻松统计答案。</p>
 <p>【51nod 1196】（见题面）定义合法链为递增的且不能往后添加数字的序列。记<code>f[i][j]</code>表示以j开头长为i的合法链的数目。显然长度是不超过logn，这个可以由前缀和优化轻松求解，并能计算出长度为i的合法链个数<code>g[i]</code>。考虑<code>v[i]</code>为合法字符串数目，则有<code>v[i]=g[1]*v[i-1]+g[2]*v[i-2]</code>……总的dp复杂度是nlogn。</p>
-<p>【51nod 1486】（网格图有些格子不能走的路径计数）想不通被黈力怒D。<code>dp[i]</code>表示从第i个障碍点出发不经过任何障碍点到达终点T的路径数，记<code>g[i][j]</code>表示从第i个点走到第j个点的所有方案，可以轻易地用组合数算出来。考虑显然的容斥$dp[i]=g[i][T]-\sum_{i-&gt;j}g[i][j]*dp[j]$就数完了。</p>
+<p>【51nod 1486】（网格图有些格子不能走的路径计数）想不通被黈力怒D。<code>dp[i]</code>表示从第i个障碍点出发不经过任何障碍点到达终点T的路径数，记<code>g[i][j]</code>表示从第i个点走到第j个点的所有方案，可以轻易地用组合数算出来。考虑显然的容斥<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>=</mo><mi>g</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>T</mi><mo>]</mo><mo>−</mo><msub><mo>∑</mo><mrow><mi>i</mi><mo>−</mo><mo>&gt;</mo><mi>j</mi></mrow></msub><mi>g</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>∗</mo><mi>d</mi><mi>p</mi><mo>[</mo><mi>j</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">dp[i]=g[i][T]-\sum_{i-&gt;j}g[i][j]*dp[j]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.185818em;vertical-align:-0.43581800000000004em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16195399999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mtight">−</span><span class="mrel mtight">&gt;</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.43581800000000004em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span></span></span></span>就数完了。</p>
 <p>【51nod 1371】（阶梯矩阵中放置自然数使各行各列之和不超过2）想不通被黈力怒D。按行从上往下看，发现方案只和所有列的和的数量有关。<code>dp[i][j][k]</code>表示前i行有j列和为1，有k列和为2。第i行时只需要考虑：①什么都不放，②放1个1，③放2个1，④放1个2。按照每个情况分类讨论即可。让我来讲一波道理：<code>dp[i][j][k]=dp[i-1][j][k]+dp[i-1][j+1][k-1]*(j+1)+dp[i-1][j-1][k]*(i-j-k+1)+dp[i-1][j-2][k]*(i-j-k+2)*(i-j-k+1)/2+dp[i-1][j][k-1]*(i-j-k+1)*j+dp[i-1][j+2][k-2]*(j+2)*(j+1)/2+dp[i-1][j][k-1]*(i-j-k+1)</code></p>
-<p>【51nod 1313】（求S[a]..S[b]+S[c]..S[d]含连续k个字母G的四元组(a,b,c,d)的个数，要求0&lt;=a&lt;=b&lt;c&lt;=d&lt;n）神TM在泼隔膜的时候想通了。显然连续k个G的来源要么是[a,b]或[c,d]中本来就包含了连续k个G，要么是[a,b]的后缀和[c,d]的前缀拼起来获得了k个G。关键是这里不能重复计算。记<code>gl[i]</code>表示i左边最近的连续k个G的起点，<code>fl[i]</code>表示从i起左边连续G的个数，<code>gr[i]</code>和<code>fr[i]</code>换个方向同理。枚举b和c，首先可以算出[?,b]和[c,?]中本来就包含了连续k个G的方案数<code>=gl[b]*(n-c+1)+(n-gr[c]+1)*b-gl[b]*(n-gr[c]+1)</code>(某侧包含-两侧同时包含)，注意应避开拼起来获得k个G的情况。然后再考虑拼起来获得k个G，前提显然是<code>fl[b]+fr[c]&gt;=k</code>，考虑不少于k个G的方案数很难计算，那么可以考虑计算少于k的方案数。发现还是存在两种情况：①拼起来所得的串只包含G，②拼起来的不止有G。①相当于求<code>0&lt;x&lt;=fl[b],0&lt;y&lt;=fr[c],x+y&lt;k</code>的整数解的个数，画画图，用<code>W(fl[b],fr[c])</code>表示答案。②显然就是左（右）侧的后（前）缀G被全部包含，另一侧的包含不到<code>k-fl[b](fr[c])</code>个G的方案。然后就是道写了整整两天的搞笑扭脖题了。<code>ans+=gl[b]*(n-c+1)+(n-gr[c]+1)*b-gl[b]*(n-gr[c]+1)+((b-gl[b])*(gr[c]-c)-W(fl[b],fr[c])-max(b-gl[b]-fl[b],0)*min(max(k-fl[b]-1,0),fr[c])-max(gr[c]-c-fr[c],0)*min(max(k-fr[c]-1,0),fl[b]))*(fl[b]+fr[c]&gt;=k);</code></p>
+<p>【51nod 1313】（求S[a]…S[b]+S[c]…S[d]含连续k个字母G的四元组(a,b,c,d)的个数，要求0&lt;=a&lt;=b&lt;c&lt;=d&lt;n）神TM在泼隔膜的时候想通了。显然连续k个G的来源要么是[a,b]或[c,d]中本来就包含了连续k个G，要么是[a,b]的后缀和[c,d]的前缀拼起来获得了k个G。关键是这里不能重复计算。记<code>gl[i]</code>表示i左边最近的连续k个G的起点，<code>fl[i]</code>表示从i起左边连续G的个数，<code>gr[i]</code>和<code>fr[i]</code>换个方向同理。枚举b和c，首先可以算出[?,b]和[c,?]中本来就包含了连续k个G的方案数<code>=gl[b]*(n-c+1)+(n-gr[c]+1)*b-gl[b]*(n-gr[c]+1)</code>(某侧包含-两侧同时包含)，注意应避开拼起来获得k个G的情况。然后再考虑拼起来获得k个G，前提显然是<code>fl[b]+fr[c]&gt;=k</code>，考虑不少于k个G的方案数很难计算，那么可以考虑计算少于k的方案数。发现还是存在两种情况：①拼起来所得的串只包含G，②拼起来的不止有G。①相当于求<code>0&lt;x&lt;=fl[b],0&lt;y&lt;=fr[c],x+y&lt;k</code>的整数解的个数，画画图，用<code>W(fl[b],fr[c])</code>表示答案。②显然就是左（右）侧的后（前）缀G被全部包含，另一侧的包含不到<code>k-fl[b](fr[c])</code>个G的方案。然后就是道写了整整两天的搞笑扭脖题了。<code>ans+=gl[b]*(n-c+1)+(n-gr[c]+1)*b-gl[b]*(n-gr[c]+1)+((b-gl[b])*(gr[c]-c)-W(fl[b],fr[c])-max(b-gl[b]-fl[b],0)*min(max(k-fl[b]-1,0),fr[c])-max(gr[c]-c-fr[c],0)*min(max(k-fr[c]-1,0),fl[b]))*(fl[b]+fr[c]&gt;=k);</code></p>
 <p>【51nod 1294】（将数列修改成严格递增的正整数数列的最少修改次数）求<code>a[i]-i</code>在正整数时的非严格单调上升子序列。</p>
 <p>【51nod 1022】（石子归并）学习了经典的四边形不等式，看起来很好用，不过感觉局限性较大。</p>
-<p>【51nod 1597】（n个物品，第i个物品大小为i，数量为i，求装满体积为n的背包的方案数）敦敦敦题。大于$\sqrt n$的数发现和数量限制无关，是完全背包，用【51nod 1259】的技巧。小于$\sqrt n$可以显然$f[i][j]=\sum_{k=0}^{i}f[i-1][j-k*i]$。用模意义下的前缀和优化：<code>tmp[k]</code>表示在转移范围内的<code>f[i-1][k]</code>的和。维护一下就能快速转移了。（大致来自SkyDec的题解）</p>
-<p>【51nod 1232】（求区间内能被每个数位整除的数的个数）状态压缩，显然转移之和前面出现了什么数和模lcm(1,2,3..9)=2520的余数相关。前者可以用出现的数的lcm表示，只有48个不同的lcm。所以<code>dfs(int  n,bool top,int lcm,int  rem)</code>表示转移到第n位，是否在原数的top(此时随便选数可能会超过原数)，前面数的集合为lcm（这里蛤习掉了），模2520的余数为rem。这里发现top=0时的状态可以直接调用，记忆化搜索就大力A掉了。</p>
+<p>【51nod 1597】（n个物品，第i个物品大小为i，数量为i，求装满体积为n的背包的方案数）敦敦敦题。大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="padding-left:0.833em;">n</span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span>的数发现和数量限制无关，是完全背包，用【51nod 1259】的技巧。小于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>n</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathdefault" style="padding-left:0.833em;">n</span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span>可以显然<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>[</mo><mi>i</mi><mo>]</mo><mo>[</mo><mi>j</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>i</mi></msubsup><mi>f</mi><mo>[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>[</mo><mi>j</mi><mo>−</mo><mi>k</mi><mo>∗</mo><mi>i</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">f[i][j]=\sum_{k=0}^{i}f[i-1][j-k*i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.264274em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.964564em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>。用模意义下的前缀和优化：<code>tmp[k]</code>表示在转移范围内的<code>f[i-1][k]</code>的和。维护一下就能快速转移了。（大致来自SkyDec的题解）</p>
+<p>【51nod 1232】（求区间内能被每个数位整除的数的个数）状态压缩，显然转移之和前面出现了什么数和模lcm(1,2,3…9)=2520的余数相关。前者可以用出现的数的lcm表示，只有48个不同的lcm。所以<code>dfs(int n,bool top,int lcm,int rem)</code>表示转移到第n位，是否在原数的top(此时随便选数可能会超过原数)，前面数的集合为lcm（这里蛤习掉了），模2520的余数为rem。这里发现top=0时的状态可以直接调用，记忆化搜索就大力A掉了。</p>
 <p>【51nod 1254】（交换两个数后的最大字段和）提问后被lych怒斥。显然只要求出“一段以<code>a[i]</code>结尾的后缀+前面不在后缀里的某数”的最大值即可，这个部分被lych一眼秒掉，可以通过前缀最大值-前缀和来转移，觉得十分高明，自己就是SB。然后左右反一反再做一边就A掉了。</p>
 <p>【51nod 1230】（求区间内数位之和为质数，数位平方和也为质数的数的个数）比【51nod 1232】简单到不知道哪里去了。<code>dfs(int n,bool top,int sum1,int sum2)</code>就扭出来了。</p>
-<p>【51nod 1291】（求n<em>m的01矩阵中所有x</em>y的矩阵个数）只会$n^3$，开启卡常大战。枚举矩形的左下角和矩形的宽，用悬线法轻松写出$n^3$dp卡卡常数优化一维数组就A掉了。</p>
-<p>【51nod 1299】（树上有m个罪犯，需要在没有罪犯的节点上布置总数最少的警卫使得没有罪犯可以不经过警卫直达叶子节点）看不懂题目讨论里的技巧写错被日死。任选一个叶子节点为根dfs，<code>f[i][0]</code>表示i所在子树没有罪犯能到达i也没有叶子能到达i的答案（最小警卫布置数），<code>f[i][1]</code>表示i所在子树没有罪犯能到达i但存在叶子能到达i的答案，<code>f[i][2]</code>表示i所在子树存在罪犯能到达i但没有叶子能到达i的答案。开始XJB转移：当前点u有罪犯，那么显然<code>f[u][0]</code>和<code>f[u][1]</code>没有意义，只需要更新<code>f[u][2]=sum(min(f[v][0],f[v][1]+1,f[v][2]);)</code>；在当前点u布置警卫，那么只需要更新<code>f[u][0]=sum(min(f[v][0],f[v][1],f[v][2]))+1</code>;（只要更新<code>f[u][0]</code>的原因是<code>f[u][0]</code>能当<code>f[u][1]</code>和<code>f[u][2]</code>用）；不在当前点u布置警卫，就不能同时从<code>f[v][1]</code>和<code>f[v][2]</code>转移过来了，大力转移就A掉了<code>f[u][1]=sum(min(f[v][1],f[v][0]));f[u][2]=sum(min(f[v][2],f[v][0]));f[u][0]=sum(f[v][0]);</code>两种转移的<code>f[u][0]</code>不要忘记比较答案..</p>
-<p>【51nod 1250】（1-n排列，求做恰好k次相邻数交换能得到不同序列个数和做不超过k次交换能得到不同序列个数）傻逼题怎么没人领榜..第一问就是问0-k中和k同奇偶的逆序对数的序列数，XJBDP见【51nod 1020】。第二问就是n个数构成不少于n-k个环的方案数。考虑<code>f[i][j]</code>为i个数含j个环的方案数。现在加入一个数i，可以自环，可以从1到i-1构成环的集合中随便找一条边插入。<code>f[i][j]=f[i-1][j-1]+f[i-1][j]*(i-1)</code>;</p>
+<p>【51nod 1291】（求n<em>m的01矩阵中所有x</em>y的矩阵个数）只会<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">n^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>，开启卡常大战。枚举矩形的左下角和矩形的宽，用悬线法轻松写出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">n^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>dp卡卡常数优化一维数组就A掉了。</p>
+<p>【51nod 1299】（树上有m个罪犯，需要在没有罪犯的节点上布置总数最少的警卫使得没有罪犯可以不经过警卫直达叶子节点）看不懂题目讨论里的技巧写错被日死。任选一个叶子节点为根dfs，<code>f[i][0]</code>表示i所在子树没有罪犯能到达i也没有叶子能到达i的答案（最小警卫布置数），<code>f[i][1]</code>表示i所在子树没有罪犯能到达i但存在叶子能到达i的答案，<code>f[i][2]</code>表示i所在子树存在罪犯能到达i但没有叶子能到达i的答案。开始XJB转移：当前点u有罪犯，那么显然<code>f[u][0]</code>和<code>f[u][1]</code>没有意义，只需要更新<code>f[u][2]=sum(min(f[v][0],f[v][1]+1,f[v][2]);)</code>；在当前点u布置警卫，那么只需要更新<code>f[u][0]=sum(min(f[v][0],f[v][1],f[v][2]))+1</code>;（只要更新<code>f[u][0]</code>的原因是<code>f[u][0]</code>能当<code>f[u][1]</code>和<code>f[u][2]</code>用）；不在当前点u布置警卫，就不能同时从<code>f[v][1]</code>和<code>f[v][2]</code>转移过来了，大力转移就A掉了<code>f[u][1]=sum(min(f[v][1],f[v][0]));f[u][2]=sum(min(f[v][2],f[v][0]));f[u][0]=sum(f[v][0]);</code>两种转移的<code>f[u][0]</code>不要忘记比较答案…</p>
+<p>【51nod 1250】（1-n排列，求做恰好k次相邻数交换能得到不同序列个数和做不超过k次交换能得到不同序列个数）傻逼题怎么没人领榜…第一问就是问0-k中和k同奇偶的逆序对数的序列数，XJBDP见【51nod 1020】。第二问就是n个数构成不少于n-k个环的方案数。考虑<code>f[i][j]</code>为i个数含j个环的方案数。现在加入一个数i，可以自环，可以从1到i-1构成环的集合中随便找一条边插入。<code>f[i][j]=f[i-1][j-1]+f[i-1][j]*(i-1)</code>;</p>
 <p>【51nod 1327】（见题面）难得TM飞起来。<code>f[i][j][k]</code>表示前i列已经放了j个棋子并且有k个放在了后缀里。以列为阶段，当前列有四种情况：什么也不放，放后缀，放中缀，放前缀。这里放前缀当且仅当第i列是某个前缀的末尾时才触发。写的丑不放转移方程w。</p>
-<p>【51nod 1231】（n个人互相alb，被啊的不加续命，啊成功的+1s，给定被擦去几个分数的续命牌，求方案数）<a href="https://en.wikipedia.org/wiki/Tournament_(graph_theory" target="_blank" rel="noopener">前置定理</a>#Score_sequences_and_score_sets)，<code>f[i][j][s]</code>表示数字i用了j个，前缀和为s，傻鸡转移不动脑子。</p>
-<p>【51nod 1261】（n位数，数位从左至右不递减，求整除k的方案数）要取膜，不能矩阵乘法浑身难受。发现数字一定是由若干个111..1拼成的，计算一下%k不同余数的个数就能转移了。还是推荐<a href="http://blog.csdn.net/skywalkert/article/details/51736965" target="_blank" rel="noopener">tangjz</a>题解。</p>
+<p>【51nod 1231】（n个人互相alb，被啊的不加续命，啊成功的+1s，给定被擦去几个分数的续命牌，求方案数）<a href="https://en.wikipedia.org/wiki/Tournament_(graph_theory)#Score_sequences_and_score_sets" target="_blank" rel="noopener">前置定理</a>，<code>f[i][j][s]</code>表示数字i用了j个，前缀和为s，傻鸡转移不动脑子。</p>
+<p>【51nod 1261】（n位数，数位从左至右不递减，求整除k的方案数）要取膜，不能矩阵乘法浑身难受。发现数字一定是由若干个111…1拼成的，计算一下%k不同余数的个数就能转移了。还是推荐<a href="http://blog.csdn.net/skywalkert/article/details/51736965" target="_blank" rel="noopener">tangjz</a>题解。</p>
 <p>Remaining：【51nod 1578】【51nod 1303】【51nod 1245】</p>
-<h2 id="BZOJ"><a href="#BZOJ" class="headerlink" title="BZOJ"></a>BZOJ</h2><p>51nod切不动了TAT，转战梁晏大视野。</p>
+<h2 id="bzoj"><a class="markdownIt-Anchor" href="#bzoj"></a> BZOJ</h2>
+<p>51nod切不动了TAT，转战梁晏大视野。</p>
 <p>【BZOJ 1801】（在棋盘上放互不攻击的炮）【51nod 1371】的变形，枚举每列放什么，XJBDP即可。</p>
 <p>【BZOJ   4321】（求没有相邻两数相邻的排列数，后面的相邻指两数差1）思考第i个数放入前i-1个数时只有相邻数差1的个数变化。大概兹磁dp了。一开始想<code>f[i][j]</code>表示1-i的排列有j对相邻数差1，发现情况还不够：i可能插在i-1和i-2之间。那么再用一维记录一下i和i-1是否相邻就能转移了。【不看题解鏼题真开心】</p>
 <p>【BZOJ 2660】（n用斐波那契数之和表示的方案数）看不懂，搁着</p>
@@ -371,12 +454,18 @@
 
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+      
+    
     
 
     
@@ -426,17 +515,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -456,7 +538,6 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
     <div class="sidebar-inner">
 
       
@@ -464,67 +545,83 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/gravator.jpg" alt="Scarlet-Climax">
             
               <p class="site-author-name" itemprop="name">Scarlet-Climax</p>
-              <p class="site-description motion-element" itemprop="description">Scarlet什么都不会</p>
+              <div class="site-description motion-element" itemprop="description">Scarlet什么都不会</div>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">tags</span>
+                  <a href="/archives/">
                 
-              </div>
-            
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-          </nav>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
 
           
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/Scarlet-Climax" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i></a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Scarlet-Climax" title="GitHub &rarr; https://github.com/Scarlet-Climax" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
             </div>
           
 
-          
           
 
           
@@ -537,15 +634,15 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://boyanzh.github.io/" title="bmm" target="_blank">bmm</a>
+                    <a href="https://boyanzh.github.io/" title="https://boyanzh.github.io/" rel="noopener" target="_blank">bmm</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://github.com/zyayoung" title="yaa" target="_blank">yaa</a>
+                    <a href="https://github.com/zyayoung" title="https://github.com/zyayoung" rel="noopener" target="_blank">yaa</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://github.com/XYPB" title="XYPB" target="_blank">XYPB</a>
+                    <a href="https://github.com/XYPB" title="https://github.com/XYPB" rel="noopener" target="_blank">XYPB</a>
                   </li>
                 
               </ul>
@@ -553,25 +650,29 @@
           
 
           
+            
+          
+          
 
         </div>
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#51nod"><span class="nav-text">51nod</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ"><span class="nav-text">BZOJ</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#51nod"><span class="nav-text"> 51nod</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bzoj"><span class="nav-text"> BZOJ</span></a></li></ol></div>
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -579,6 +680,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -587,17 +689,19 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Scarlet-Climax</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -605,12 +709,13 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
 
 
 
 
         
+
 
 
 
@@ -631,11 +736,14 @@
 
     
 
+    
+
+    
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -649,103 +757,11 @@
 
 
 
-  
 
 
 
 
 
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
 
 
 
@@ -759,7 +775,63 @@
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
 
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
 
 
 
@@ -769,37 +841,20 @@
   
 
   
-
-  
   
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+    
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+  
+    <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css"><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -817,7 +872,32 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
+  
 
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
