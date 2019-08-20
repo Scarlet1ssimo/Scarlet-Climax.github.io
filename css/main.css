@@ -1379,7 +1379,7 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: 0 auto 25px;
   padding: 3px;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1888,7 +1888,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c2ff42;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
