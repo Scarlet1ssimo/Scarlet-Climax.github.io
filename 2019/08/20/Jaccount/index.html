@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#ff2a2a">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#ff2a2a">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="众所周知，国际大厂经常对在校大学生给予各种各样的优惠，从网购优惠到免费授权正版软件、开发工具。以买下Adobe全家桶远近闻名的SJTU自然在其它方面也加带了力度。 开门见山，今天以白嫖大厂享受高校资源为目的，为读者梳理一下怎么用Jaccount赚回学费获得更多学习资源。">
+<meta name="keywords" content="迷惑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="赚回学费？Jaccount白嫖正确打开姿势！">
+<meta property="og:url" content="http://yoursite.com/2019/08/20/Jaccount/index.html">
+<meta property="og:site_name" content="Scarlet Devil Mansion">
+<meta property="og:description" content="众所周知，国际大厂经常对在校大学生给予各种各样的优惠，从网购优惠到免费授权正版软件、开发工具。以买下Adobe全家桶远近闻名的SJTU自然在其它方面也加带了力度。 开门见山，今天以白嫖大厂享受高校资源为目的，为读者梳理一下怎么用Jaccount赚回学费获得更多学习资源。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Adobe_Creative_Cloud_mark.svg/150px-Adobe_Creative_Cloud_mark.svg.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/08/20/mGEKKA.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/100px-Matlab_Logo.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/SolidWorks_Logo.svg/300px-SolidWorks_Logo.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/JetBrains_Logo_2016.svg/220px-JetBrains_Logo_2016.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Logo_Microsoft_Office_365.svg/200px-Logo_Microsoft_Office_365.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/zh/thumb/7/72/VMwaren_logo.svg/200px-VMwaren_logo.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mathematica_Logo.svg/61px-Mathematica_Logo.svg.png">
+<meta property="og:image" content="https://dwa5x7aod66zk.cloudfront.net/assets/next/wordmark-b2322266c45ea75318d0ea4481ab3c0aaa587af433ead331ba0ec402ad79fde9.svg">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/250px-Amazon_Web_Services_Logo.svg.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/zh/thumb/b/b5/Tencent_Cloud_logo.svg/220px-Tencent_Cloud_logo.svg.png">
+<meta property="og:updated_time" content="2019-08-20T03:19:17.901Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="赚回学费？Jaccount白嫖正确打开姿势！">
+<meta name="twitter:description" content="众所周知，国际大厂经常对在校大学生给予各种各样的优惠，从网购优惠到免费授权正版软件、开发工具。以买下Adobe全家桶远近闻名的SJTU自然在其它方面也加带了力度。 开门见山，今天以白嫖大厂享受高校资源为目的，为读者梳理一下怎么用Jaccount赚回学费获得更多学习资源。">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Adobe_Creative_Cloud_mark.svg/150px-Adobe_Creative_Cloud_mark.svg.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/20/Jaccount/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>赚回学费？Jaccount白嫖正确打开姿势！ | Scarlet Devil Mansion</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Scarlet Devil Mansion</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Scarlet什么都不会</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/Jaccount/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Scarlet-Climax">
+      <meta itemprop="description" content="Scarlet什么都不会">
+      <meta itemprop="image" content="/images/gravator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scarlet Devil Mansion">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">赚回学费？Jaccount白嫖正确打开姿势！
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-20 11:18:20 / 修改时间：11:19:17" itemprop="dateCreated datePublished" datetime="2019-08-20T11:18:20+08:00">2019-08-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>众所周知，国际大厂经常对在校大学生给予各种各样的优惠，从网购优惠到免费授权正版软件、开发工具。以买下Adobe全家桶远近闻名的SJTU自然在其它方面也加带了力度。</p>
+<p>开门见山，今天以<s>白嫖大厂</s>享受高校资源为目的，为读者梳理一下怎么用Jaccount<s>赚回学费</s>获得更多学习资源。</p>
+<a id="more"></a>
+<p>本文将会只注重于介绍各种可嫖的资源，各优惠具体申请方式请善用搜索引擎。</p>
+<h2 id="sjtu专享"><a class="markdownIt-Anchor" href="#sjtu专享"></a> SJTU专享</h2>
+<p>非特殊说明，本节绝大多数授权方式可在<a href="http://lic.si.sjtu.edu.cn/Softs" target="_blank" rel="noopener">SJTU软件授权中心</a>找到。</p>
+<h3 id="adobe全家桶"><a class="markdownIt-Anchor" href="#adobe全家桶"></a> Adobe全家桶</h3>
+<blockquote>
+<p>Adobe国内官方授权店￥7450一年</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Adobe_Creative_Cloud_mark.svg/150px-Adobe_Creative_Cloud_mark.svg.png" alt="img"></p>
+<p>全宇宙都在用的<strong>Photoshop</strong>、<strong>Premiere</strong>、<strong>AfterEffects</strong>、<strong>Audition</strong>，SJTU全都买了！</p>
+<p>原价1k，2k，3k的设计软件，通通不要钱，通通不要钱。</p>
+<p><img src="https://s2.ax1x.com/2019/08/20/mGEKKA.png" alt="全家桶最重要的是整整齐齐"></p>
+<p>全家桶最重要的是整整齐齐.jpg</p>
+<p><s>其实用的最多的还是Acrobat</s></p>
+<h3 id="matlab"><a class="markdownIt-Anchor" href="#matlab"></a> MATLAB</h3>
+<blockquote>
+<p>教育版￥1500（每年），商用￥6200（每年）</p>
+</blockquote>
+<blockquote>
+<p>MATLAB是一种用于算法开发、数据可视化、数据分析以及数值计算的高级技术计算语言和交互式环境。除了矩阵运算、绘制函数/数据图像等常用功能外，MATLAB还可以用来创建用户界面及与调用其它语言（包括C、C++、Java、Python和FORTRAN）编写的程序。</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/100px-Matlab_Logo.png" alt="img"></p>
+<p>MATLAB是一款老牌的计算机程序语言、交互式环境，和JI的教学息息相关（</p>
+<p>修机导的小伙伴得抓紧在开课前把MATLAB安装搞定了！</p>
+<p>和Adobe全家桶一样，t/p的同学想用还买不起呢。</p>
+<h3 id="solidworks"><a class="markdownIt-Anchor" href="#solidworks"></a> Solidworks</h3>
+<blockquote>
+<p>知乎上描述一套标准版完整授权需要6w+</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/SolidWorks_Logo.svg/300px-SolidWorks_Logo.svg.png" alt="img"></p>
+<p>工导制图必备！<s>6w授权费用到就是赚到</s></p>
+<p>Solidworks是一款功能强大、商业级的工程建模软件。想在工导symposium上秀一波graphic design的震惊professor的同学们可以先摸起来了。</p>
+<h3 id="jetbrains全家桶"><a class="markdownIt-Anchor" href="#jetbrains全家桶"></a> JetBrains全家桶</h3>
+<blockquote>
+<p>$500一年</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/JetBrains_Logo_2016.svg/220px-JetBrains_Logo_2016.svg.png" alt="JetBrains Logo 2016.svg"></p>
+<p>JB全家桶是地表最强的开发工具之一，知名产品有</p>
+<blockquote>
+<ul>
+<li>CLion - 跨平台的C/C++ IDE 开发工具，支持C<ins>11 、C</ins>14、libc++以及Boost。</li>
+<li>IntelliJ IDEA - 2001年发布。一套智能的 Java 集成开发环境，特别专注与强调程序师的开发撰写效率提升。</li>
+<li>PyCharm - 一款结合了Django框架的Python IDE开发工具。</li>
+<li>WebStorm - JavaScript的开发工具。</li>
+</ul>
+</blockquote>
+<p>想尝试学习开发的同学可以搞快点。</p>
+<h3 id="office-365"><a class="markdownIt-Anchor" href="#office-365"></a> Office 365</h3>
+<blockquote>
+<p>Office 365：个人版￥398每年</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Logo_Microsoft_Office_365.svg/200px-Logo_Microsoft_Office_365.svg.png" alt="Logo Microsoft Office 365.svg"></p>
+<blockquote>
+<p>“新版office的精髓全在PowerPoint的平滑切换”——某不愿透露姓名的工导PPT制作受害者</p>
+</blockquote>
+<p>微软对SJTU的授权相关内容可在<a href="http://365.sjtu.edu.cn/" target="_blank" rel="noopener">SJTU365</a>找到</p>
+<p>但是SJTU这边似乎咕咕申请了365授权，祈祷开学可以嫖到365。</p>
+<h3 id="vmware学术计划"><a class="markdownIt-Anchor" href="#vmware学术计划"></a> VMware学术计划</h3>
+<blockquote>
+<p>$249.99一个月</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/zh/thumb/7/72/VMwaren_logo.svg/200px-VMwaren_logo.svg.png" alt="VMwaren logo.svg"></p>
+<p>VMware是戴尔旗下一家提供云计算和硬件虚拟化的软件和服务的公司，主要产品有VMware Workstation（Windows）和VMware Fusion（Mac）。</p>
+<p>VMware对SJTU的相关授权可在<a href="http://vmap.sjtu.edu.cn/" target="_blank" rel="noopener">VMware学术计划</a>找到</p>
+<p>想摸linux但又不敢双系统的同学可以搞一套熟悉一下linux。</p>
+<h2 id="ji特权"><a class="markdownIt-Anchor" href="#ji特权"></a> JI特权</h2>
+<h3 id="mathematica"><a class="markdownIt-Anchor" href="#mathematica"></a> Mathematica</h3>
+<blockquote>
+<p>$200每年</p>
+</blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mathematica_Logo.svg/61px-Mathematica_Logo.svg.png" alt="Mathematica Logo.svg"></p>
+<p>地表最秀科学计算软件、计算机代数系统。下能自动偏导、绘制3D函数图像和向量场；上能求微分方程解析解、自动施密特正交化（手动狗头）。火叔叔最爱。</p>
+<p>因为是UM给的授权，笔者不是很清楚授权协议，建议大家尝试按照相关课件（如285课件）上的方法申请。</p>
+<h2 id="edu邮箱通用姿势"><a class="markdownIt-Anchor" href="#edu邮箱通用姿势"></a> Edu邮箱通用姿势</h2>
+<h3 id="github-student-developer-pack"><a class="markdownIt-Anchor" href="#github-student-developer-pack"></a> Github Student Developer Pack</h3>
+<p><s>这Pack太值钱我都不知道怎么介绍了</s></p>
+<p><img src="https://dwa5x7aod66zk.cloudfront.net/assets/next/wordmark-b2322266c45ea75318d0ea4481ab3c0aaa587af433ead331ba0ec402ad79fde9.svg" alt="GitHub Education"></p>
+<p>相关信息请参考<a href="https://education.github.com/pack" target="_blank" rel="noopener">Github Student Developer Pack</a></p>
+<p>说几条关键的</p>
+<ul>
+<li>Digital Ocean的50刀代金券</li>
+<li>Namecheap送一年的.me域名和SSL证书</li>
+<li>Simple DNS一年免费DNS搭建</li>
+<li>GitKraken炫酷高级账户一年使用</li>
+<li>Microsoft Imagine的100刀Azure优惠额度</li>
+<li>algolia（$150每月）等神奇api优先使用权</li>
+<li>AWS educate的100刀，见下</li>
+</ul>
+<h3 id="amazon-aws"><a class="markdownIt-Anchor" href="#amazon-aws"></a> Amazon AWS</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/250px-Amazon_Web_Services_Logo.svg.png" alt="Amazon Web Services Logo"></p>
+<p>AWS是由亚马逊公司所创建的云计算平台，提供许多远程Web服务。</p>
+<p>用Jaccount注册能在AWS上<strong>每年</strong>嫖<strong>100刀</strong><a href="https://aws.amazon.com/cn/education/awseducate/" target="_blank" rel="noopener">教育优惠</a>（需要信用卡。这里实名建议尽早整一张信用卡，反正迟早要整的）。要知道Lightsail的最低配主机只需要<strong>3.5刀每月</strong>……</p>
+<p>然后这个Amazon Lightsail真的实力造福人类。Lightsail可创建实例内置了从Wordpress到LAMP各种各样的配置好的应用，主机区域包括俄亥俄州、弗吉尼亚州、东京、首尔等~~（疯狂暗示）~~。</p>
+<h3 id="腾讯云"><a class="markdownIt-Anchor" href="#腾讯云"></a> 腾讯云</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/zh/thumb/b/b5/Tencent_Cloud_logo.svg/220px-Tencent_Cloud_logo.svg.png" alt="Tencent Cloud logo.svg"></p>
+<p>AWS能白嫖的主机毕竟在国外，如果你的应用对延迟有要求~~（再次迷惑暗示）~~会很尴尬。</p>
+<p>腾讯云推出10元每月的<a href="https://cloud.tencent.com/act/campus" target="_blank" rel="noopener">校园优惠套餐</a>（配置是单核CPU、2G内存，1Mbps带宽和50G存储），加16元可选购1年.cn域名使用权。</p>
+<p>当然还有阿里云和百度智能云等可供选择，大家按各自喜好选择厂家……</p>
+<h2 id="后记"><a class="markdownIt-Anchor" href="#后记"></a> 后记</h2>
+<p>如果你认真读到了这里，你可能已经发现赚回学费是假的，是特技，是标题党的成分。JI的学费是赚不回来的orz，Solidworks的6w+也不是这样算的……</p>
+<p>但是从Github学生包的近年变化中可以看出大厂们对学生正在加带优惠力度，大家以后注册跟钱有关的新网站优先用Jaccount，搞不好有隐形福利。</p>
+<p>最后祝大家用本文介绍的开发设计神器能改善大学四年的学习、生活质量。</p>
+<p>网页版文章持续更新，欢迎读者补充其他白嫖途径。</p>
+<blockquote>
+<p>如果您觉得省到了，请持续关注JI-Tech，其他技术文章持续绝赞咕咕中！</p>
+</blockquote>
+<h2 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h2>
+<p>[1] <a href="https://vircloud.net/offer/edu-welfare.html" target="_blank" rel="noopener">https://vircloud.net/offer/edu-welfare.html</a></p>
+<p>[2] <a href="https://zhuanlan.zhihu.com/p/27171877" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/27171877</a></p>
+<p>[3] <a href="https://zhuanlan.zhihu.com/p/22804091" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22804091</a></p>
+<p>[4] <a href="https://www.liout.com/edudajihe.html" target="_blank" rel="noopener">https://www.liout.com/edudajihe.html</a></p>
+<p>[5] <a href="http://lic.si.sjtu.edu.cn/Softs" target="_blank" rel="noopener">http://lic.si.sjtu.edu.cn/Softs</a></p>
+<p>[6] <a href="https://zh.wikipedia.org/wiki/JetBrains" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/JetBrains</a></p>
+<p>[7] <a href="https://zh.wikipedia.org/wiki/MATLAB" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/MATLAB</a></p>
+<p>[8] <a href="https://zh.wikipedia.org/wiki/VMware" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/VMware</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/迷惑/" rel="tag"># 迷惑</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/20/magic/" rel="next" title="关于任意阶幻方公式解">
+                <i class="fa fa-chevron-left"></i> 关于任意阶幻方公式解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/gravator.jpg" alt="Scarlet-Climax">
+            
+              <p class="site-author-name" itemprop="name">Scarlet-Climax</p>
+              <div class="site-description motion-element" itemprop="description">Scarlet什么都不会</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Scarlet-Climax" title="GitHub &rarr; https://github.com/Scarlet-Climax" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://boyanzh.github.io/" title="https://boyanzh.github.io/" rel="noopener" target="_blank">bmm</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/zyayoung" title="https://github.com/zyayoung" rel="noopener" target="_blank">yaa</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/XYPB" title="https://github.com/XYPB" rel="noopener" target="_blank">XYPB</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sjtu专享"><span class="nav-text"> SJTU专享</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#adobe全家桶"><span class="nav-text"> Adobe全家桶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matlab"><span class="nav-text"> MATLAB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#solidworks"><span class="nav-text"> Solidworks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jetbrains全家桶"><span class="nav-text"> JetBrains全家桶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#office-365"><span class="nav-text"> Office 365</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vmware学术计划"><span class="nav-text"> VMware学术计划</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ji特权"><span class="nav-text"> JI特权</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mathematica"><span class="nav-text"> Mathematica</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#edu邮箱通用姿势"><span class="nav-text"> Edu邮箱通用姿势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#github-student-developer-pack"><span class="nav-text"> Github Student Developer Pack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#amazon-aws"><span class="nav-text"> Amazon AWS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#腾讯云"><span class="nav-text"> 腾讯云</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后记"><span class="nav-text"> 后记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reference"><span class="nav-text"> Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Scarlet-Climax</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
