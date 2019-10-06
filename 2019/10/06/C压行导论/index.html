@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Scarlet Devil Mansion">
 <meta property="og:description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-06T05:16:51.540Z">
+<meta property="og:updated_time" content="2019-10-06T05:24:51.132Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++ 压行导论">
 <meta name="twitter:description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
@@ -338,7 +338,7 @@
                 
               
 
-              <time title="创建时间：2019-10-06 13:16:51" itemprop="dateCreated datePublished" datetime="2019-10-06T13:16:51+08:00">2019-10-06</time>
+              <time title="创建时间：2019-10-06 13:24:51" itemprop="dateCreated datePublished" datetime="2019-10-06T13:24:51+08:00">2019-10-06</time>
             
 
             
@@ -399,6 +399,7 @@
 </ul>
 <p>其余不怎么重要的规定：</p>
 <ul>
+<li>关闭你的Code Formatter</li>
 <li>空格随意</li>
 <li>大括号换行随意。</li>
 <li>全局变量的使用随意。</li>
@@ -433,7 +434,7 @@
 <p>众所周知，利用逗号表达式，我们可以把若干个简单语句（赋值语句）缩成一行。</p>
 <h3 id="读数并取最大值"><a class="markdownIt-Anchor" href="#读数并取最大值"></a> 读数并取最大值</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    M=max(M,a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,a+i),M=max(M,a[i]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="built_in">scanf</span>(<span class="string">"%d"</span>,a+i),M=max(M,a[i]);</span><br></pre></td></tr></table></figure>
 <h3 id="输出return"><a class="markdownIt-Anchor" href="#输出return"></a> 输出return</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>(<span class="string">"GG"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"GG"</span>),<span class="number">0</span>;<span class="comment">//这里用到了返回后一个数的特性。</span></span><br></pre></td></tr></table></figure>
