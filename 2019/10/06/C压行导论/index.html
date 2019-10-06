@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#ff2a2a">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#ff2a2a">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
+<meta name="keywords" content="迷惑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C&#x2F;C++ 压行导论">
+<meta property="og:url" content="http://yoursite.com/2019/10/06/C压行导论/index.html">
+<meta property="og:site_name" content="Scarlet Devil Mansion">
+<meta property="og:description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-06T04:18:45.970Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C&#x2F;C++ 压行导论">
+<meta name="twitter:description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/06/C压行导论/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>C/C++ 压行导论 | Scarlet Devil Mansion</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Scarlet Devil Mansion</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Scarlet什么都不会</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/06/C压行导论/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Scarlet-Climax">
+      <meta itemprop="description" content="Scarlet什么都不会">
+      <meta itemprop="image" content="/images/gravator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Scarlet Devil Mansion">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">C/C++ 压行导论
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-06 12:17:26 / 修改时间：12:18:45" itemprop="dateCreated datePublished" datetime="2019-10-06T12:17:26+08:00">2019-10-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。</p>
+</blockquote>
+<p>今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。</p>
+<a id="more"></a>
+<p>按照套路（？），先设定压行底线，然后讲一些小技巧，最后再讨论一下五大压行姿势。</p>
+<h2 id="-1-规定"><a class="markdownIt-Anchor" href="#-1-规定"></a> -1. 规定</h2>
+<p>为了保证代码质量，先设定如下底线。</p>
+<ul>
+<li>除了单行函数以外，大括号不能在同一行。</li>
+<li>除了连续变量声明等少数情况以外，一行一个分号语句。</li>
+<li>不额外增加时间复杂度。</li>
+<li>不产生UB。</li>
+</ul>
+<p>主要目标：</p>
+<ul>
+<li>以去掉不必要的大括号为主要手段，尽量减少行数</li>
+<li>加强对C/C++语句的理解（？</li>
+<li>使代码变得紧凑有力（？</li>
+<li>增加代码的迷惑程度（？</li>
+<li>增加代码的可爱程度（？</li>
+<li>让TA不想研究你的代码（？</li>
+<li>降低熵（？</li>
+</ul>
+<p>其余不怎么重要的规定：</p>
+<ul>
+<li>空格随意</li>
+<li>大括号换行随意。</li>
+<li>全局变量的使用随意。</li>
+<li>本文基本遵循C++11规定，但可能会无视少量不UB相关的编译警告。</li>
+<li>HC警告，虽然不知道哪里可能用上，但是直接复制代码后果自负</li>
+</ul>
+<h2 id="0-前置姿势"><a class="markdownIt-Anchor" href="#0-前置姿势"></a> 0. 前置姿势</h2>
+<h3 id="条件语句"><a class="markdownIt-Anchor" href="#条件语句"></a> 条件语句</h3>
+<p>if,for,while的条件不必是布尔值，事实上它会对括号内的返回值做一个变成bool型的隐式转换，转换方式就是除0外的数都是1，只有0变成0，可以参考下面代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">1</span>) <span class="built_in">puts</span>(<span class="string">"OK"</span>);</span><br><span class="line"><span class="keyword">if</span> (<span class="number">0</span>) <span class="built_in">puts</span>(<span class="string">"OKK"</span>);</span><br><span class="line"><span class="keyword">if</span> (<span class="number">-1</span>) <span class="built_in">puts</span>(<span class="string">"OKKK"</span>);</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OK</span><br><span class="line">OKKK</span><br></pre></td></tr></table></figure>
+<p>相关地，运用好某些奇妙运算，有些固定语句可以压，比如<code>a!=b</code>大多数情况下可以替换为<code>a-b</code>甚至<code>a^b</code>。</p>
+<h3 id="运算优先级去括号"><a class="markdownIt-Anchor" href="#运算优先级去括号"></a> 运算优先级去括号</h3>
+<p>警告：在大多数编译器下该姿势会产生编译警告。</p>
+<p>对常见运算优先级进行归纳：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">自增自减逻辑非 &gt; 乘除模 &gt; 加减 &gt; 左右移 &gt; 大小比较 &gt; 等于比较 &gt; 按位与 &gt; 按位异或 &gt; 按位或 &gt; 逻辑与 &gt; 逻辑或&gt; ?: &gt; 赋值 &gt; 逗号表达式</span><br></pre></td></tr></table></figure>
+<p>可以利用运算优先级去掉不必要的括号。</p>
+<p>经典的取两数平均：<code>l+r&gt;&gt;1</code>，利用了右移符号比加法晚算，要注意<code>l+r</code>可能溢出。</p>
+<h3 id="短路"><a class="markdownIt-Anchor" href="#短路"></a> 短路</h3>
+<p>当编译器发现一个简单条件语句不可能为真时，它会提前返回这个条件语句的值。</p>
+<p>如果我们有个语句A，判断B，当B为真才执行A，我们可以写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">((B)&amp;&amp;(A))</span><br><span class="line">//如果B为真则走一遍A，否则不执行A，直接返回0</span><br><span class="line">//注：这里需要A有不为0的返回值</span><br></pre></td></tr></table></figure>
+<h3 id="寻址"><a class="markdownIt-Anchor" href="#寻址"></a> 寻址</h3>
+<p>众所周知，数组的寻址是对地址做加法，那么</p>
+<p><code>scanf(“%d”,&amp;a[i])</code>可以压成<code>scanf(“%d”,a+i)</code></p>
+<p>其他用法请自行探索。</p>
+<h2 id="1-逗号表达式"><a class="markdownIt-Anchor" href="#1-逗号表达式"></a> 1. 逗号表达式</h2>
+<blockquote>
+<p>c语言提供一种特殊的运算符，逗号运算符，优先级别最低，它将两个及其以上的式子联接起来，从左往右逐个计算表达式，整个表达式的值为最后一个表达式的值。</p>
+</blockquote>
+<p>众所周知，利用逗号表达式，我们可以把若干个简单语句（赋值语句）缩成一行。</p>
+<h3 id="读数并取最大值"><a class="markdownIt-Anchor" href="#读数并取最大值"></a> 读数并取最大值</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">    M=max(M,a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,a+i),M=max(M,a[i]);</span><br></pre></td></tr></table></figure>
+<h3 id="输出return"><a class="markdownIt-Anchor" href="#输出return"></a> 输出return</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>(<span class="string">"GG"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">"GG"</span>),<span class="number">0</span>;<span class="comment">//这里用到了返回后一个数的特性。</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-for语句的三个空"><a class="markdownIt-Anchor" href="#2-for语句的三个空"></a> 2. for语句的三个空</h2>
+<p>众所周知，<code>for(;;)</code>和<code>while()</code>长度相同，往<code>while</code>里填语句等价于往<code>for</code>的中间一格填语句，所以请大家以后不要再用<code>while</code>了（笑</p>
+<p>首先，for语句的三个空基本上是填满的，而且for语句的三个空只接受一个表达式。所以用好for语句的首要条件是熟练运用逗号表达式</p>
+<p>回顾一下for语句：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化语句A;循环控制语句B;单次循环结束执行语句C)</span><br><span class="line">    循环中执行语句D</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">一次循环发生了：</span></span><br><span class="line"><span class="comment">A-&gt;B-&gt;DC-&gt;B-&gt;DC-&gt;...-&gt;B-&gt;DC-&gt;B-&gt;退出</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>可以总结：A完全分离，只用来初始化；C在D之后但地位等同；B在D前，但多一个控制循环的作用。</p>
+<p>于是我们可以利用这点把不能压行的语句块前后的语句缩进for里</p>
+<h3 id="输出矩阵"><a class="markdownIt-Anchor" href="#输出矩阵"></a> 输出矩阵</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i][j]);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++,<span class="built_in">puts</span>(<span class="string">""</span>))</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i][j]);</span><br></pre></td></tr></table></figure>
+<h3 id="快速幂"><a class="markdownIt-Anchor" href="#快速幂"></a> 快速幂</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">Pow</span><span class="params">(LL a,LL b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL ret=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;b;)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)ret=ret*a%mod;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">Pow</span><span class="params">(LL a,LL b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL ret=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;b;b&gt;&gt;=<span class="number">1</span>,a=a*a%mod)<span class="keyword">if</span>(b&amp;<span class="number">1</span>)ret=ret*a%mod;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在极端情况下，为了让第一个空能发挥出最大效能，会把局部变量定义到外面。举例见第四节的Dijkstra。</p>
+<h2 id="3-三目运算符"><a class="markdownIt-Anchor" href="#3-三目运算符"></a> 3. 三目运算符</h2>
+<p>众所周知，三目运算符可以替代一个简单的if语句。由于选择语句的特殊性，我们知道if是十分难压掉的，所以可以考虑用三目运算符来替代一个简单if。</p>
+<h3 id="判断输出"><a class="markdownIt-Anchor" href="#判断输出"></a> 判断输出</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(x==<span class="number">0</span>)</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"YES"</span>);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"NO"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>(x?<span class="string">"NO"</span>:<span class="string">"YES"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="最大公约数"><a class="markdownIt-Anchor" href="#最大公约数"></a> 最大公约数</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(y==<span class="number">0</span>)<span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">return</span> gcd(y,x%y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;<span class="keyword">return</span> y?gcd(y,x%y):x;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-赋值语句的返回值"><a class="markdownIt-Anchor" href="#4-赋值语句的返回值"></a> 4. 赋值语句的返回值</h2>
+<p>众所周知，赋值语句（后自增运算i++除外）返回赋值结束后左值结果。那么可以用这个技巧来偷步。</p>
+<h3 id="并查集"><a class="markdownIt-Anchor" href="#并查集"></a> 并查集</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getfather</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==f[x])</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        f[x]=getfather(f[x]);</span><br><span class="line">        <span class="keyword">return</span> f[x];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getfather</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;<span class="keyword">return</span> x^f[x]?f[x]=getfather(f[x]):x;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="堆优化dijkstra"><a class="markdownIt-Anchor" href="#堆优化dijkstra"></a> 堆优化Dijkstra</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line">priority_queue&lt;P, <span class="built_in">vector</span>&lt;P&gt;, greater&lt;P&gt;&gt; Q;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">	<span class="keyword">while</span>(!Q.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> u=Q.top().second;Q.pop();</span><br><span class="line">		<span class="keyword">if</span>(vis[now])<span class="keyword">continue</span>;vis[now]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=idx[u];i;i=nxt[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> v=to[i];</span><br><span class="line">			<span class="keyword">if</span>(d[u]+w[i]&lt;d[v])</span><br><span class="line">			&#123;</span><br><span class="line">				d[v]=d[u]+w[i];</span><br><span class="line">				q.push(make_pair(d[v],v));</span><br><span class="line">			&#125;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//..</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line">priority_queue&lt;P, <span class="built_in">vector</span>&lt;P&gt;, greater&lt;P&gt;&gt; Q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Dijkstra</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="keyword">int</span> u,v,i;P t;</span><br><span class="line">    <span class="keyword">for</span>(;!Q.empty();)</span><br><span class="line">        <span class="keyword">for</span>(t=Q.top(),Q.pop(),u=t.second,i=idx[u];d[t.second]&lt;t.first&amp;&amp;i;i=nxt[i])</span><br><span class="line">            <span class="keyword">if</span>(d[u]+w[i]&lt;d[v=to[i]])</span><br><span class="line">                Q.push(P(d[v]=d[u]+w[i],v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="spfa"><a class="markdownIt-Anchor" href="#spfa"></a> SPFA</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;Q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">SPFA</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">    <span class="keyword">for</span>(!Q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> u=Q.front();</span><br><span class="line">        Q.pop();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=u;i;i=nxt[t])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> v=to[i];</span><br><span class="line">            <span class="keyword">if</span>(f[u]+w[i]&gt;f[v])</span><br><span class="line">            &#123;</span><br><span class="line">                f[v]=f[u]+w[i];</span><br><span class="line">            	<span class="keyword">if</span>(!inq[v])</span><br><span class="line">                &#123;</span><br><span class="line">                    inq[v]=<span class="number">1</span>;</span><br><span class="line">                    Q.push(v);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;Q;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">SPFA</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">    <span class="keyword">int</span> u,v,i;</span><br><span class="line">    <span class="keyword">for</span>(;!Q.empty();)</span><br><span class="line">        <span class="keyword">for</span>(u=Q.front(),Q.pop(),i=u;i;i=nxt[t])</span><br><span class="line">            <span class="keyword">if</span>(f[u]+w[i]&gt;f[v=to[i]])</span><br><span class="line">                <span class="keyword">if</span>(!inq[f[v]=f[u]+w[i],v])inq[v]=<span class="number">1</span>,Q.push(v);<span class="comment">//这里运用了逗号表达式</span></span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-宏"><a class="markdownIt-Anchor" href="#5-宏"></a> 5. 宏</h2>
+<p>众所周知，用宏可以减少一些重复代码。</p>
+<p>但是用宏不当容易翻车，所以这里不多做展开，只是随意举几例，请大家务必小心。</p>
+<h3 id="读入优化"><a class="markdownIt-Anchor" href="#读入优化"></a> 读入优化</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> G c=getchar()</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> G;</span><br><span class="line">	<span class="keyword">for</span>(;c&gt;<span class="number">57</span>||c&lt;<span class="number">48</span>;G)<span class="keyword">if</span>(c==<span class="string">'-'</span>)f=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;c&gt;<span class="number">47</span>&amp;&amp;c&lt;<span class="number">58</span>;G)x=x*<span class="number">10</span>+c<span class="number">-48</span>;</span><br><span class="line">	<span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="邻接表加边"><a class="markdownIt-Anchor" href="#邻接表加边"></a> 邻接表加边</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> idx[maxn],nxt[maxm],to[maxm],Si;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> AE(u,v) to[Si]=v,nxt[Si]=idx[u],idx[u]=Si++</span></span><br></pre></td></tr></table></figure>
+<h2 id="写在最后"><a class="markdownIt-Anchor" href="#写在最后"></a> 写在最后</h2>
+<blockquote>
+<p>过早压行是万恶之源——Scarlet</p>
+</blockquote>
+<p>如果有读者有幸看到了这里，他可能已经开始考虑怎么<strong>转发</strong>本文让他人受到这篇文章的毒害了。</p>
+<p>但是如上文所说，如果不是有绝对的把握，请在不要在完成debug之前就开始压行，优化代码也是同理。</p>
+<p>同时推荐大家把上述技巧应用于有维护需要的项目上（手动滑稽）</p>
+<p>最后放一个两行LIS就跑</p>
+<h3 id="最长严格上升子序列"><a class="markdownIt-Anchor" href="#最长严格上升子序列"></a> 最长严格上升子序列</h3>
+<p>题目大意：找出最长的上升降子序列</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> S[<span class="number">5001</span>],l,k,w;main()&#123;<span class="keyword">for</span>(<span class="built_in">std</span>::<span class="built_in">cin</span>&gt;&gt;k;<span class="built_in">std</span>::<span class="built_in">cin</span>&gt;&gt;k;S[l&lt;(w=<span class="built_in">std</span>::lower_bound(S+<span class="number">1</span>,S+l+<span class="number">1</span>,k)-S)?l=w:w]=k);<span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;l;&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/迷惑/" rel="tag"># 迷惑</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/05/SG/" rel="next" title="组合游戏与SG定理">
+                <i class="fa fa-chevron-left"></i> 组合游戏与SG定理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/gravator.jpg" alt="Scarlet-Climax">
+            
+              <p class="site-author-name" itemprop="name">Scarlet-Climax</p>
+              <div class="site-description motion-element" itemprop="description">Scarlet什么都不会</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Scarlet-Climax" title="GitHub &rarr; https://github.com/Scarlet-Climax" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://boyanzh.github.io/" title="https://boyanzh.github.io/" rel="noopener" target="_blank">bmm</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/zyayoung" title="https://github.com/zyayoung" rel="noopener" target="_blank">yaa</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/XYPB" title="https://github.com/XYPB" rel="noopener" target="_blank">XYPB</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#-1-规定"><span class="nav-text"> -1. 规定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0-前置姿势"><span class="nav-text"> 0. 前置姿势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件语句"><span class="nav-text"> 条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算优先级去括号"><span class="nav-text"> 运算优先级去括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#短路"><span class="nav-text"> 短路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寻址"><span class="nav-text"> 寻址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-逗号表达式"><span class="nav-text"> 1. 逗号表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读数并取最大值"><span class="nav-text"> 读数并取最大值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出return"><span class="nav-text"> 输出return</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-for语句的三个空"><span class="nav-text"> 2. for语句的三个空</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输出矩阵"><span class="nav-text"> 输出矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速幂"><span class="nav-text"> 快速幂</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-三目运算符"><span class="nav-text"> 3. 三目运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断输出"><span class="nav-text"> 判断输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大公约数"><span class="nav-text"> 最大公约数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-赋值语句的返回值"><span class="nav-text"> 4. 赋值语句的返回值</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#并查集"><span class="nav-text"> 并查集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆优化dijkstra"><span class="nav-text"> 堆优化Dijkstra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spfa"><span class="nav-text"> SPFA</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-宏"><span class="nav-text"> 5. 宏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读入优化"><span class="nav-text"> 读入优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邻接表加边"><span class="nav-text"> 邻接表加边</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后"><span class="nav-text"> 写在最后</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最长严格上升子序列"><span class="nav-text"> 最长严格上升子序列</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Scarlet-Climax</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.1</div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.1"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.1"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
