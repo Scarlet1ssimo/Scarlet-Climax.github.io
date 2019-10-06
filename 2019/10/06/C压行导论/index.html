@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Scarlet Devil Mansion">
 <meta property="og:description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-06T05:00:19.348Z">
+<meta property="og:updated_time" content="2019-10-06T05:16:51.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++ 压行导论">
 <meta name="twitter:description" content="任何傻瓜都能写出计算机可以理解的代码。好的程序员能写出人能读懂的代码。  今天来教大家怎么写出又可爱又迷惑又让人读不懂的代码。">
@@ -338,7 +338,7 @@
                 
               
 
-              <time title="创建时间：2019-10-06 13:00:19" itemprop="dateCreated datePublished" datetime="2019-10-06T13:00:19+08:00">2019-10-06</time>
+              <time title="创建时间：2019-10-06 13:16:51" itemprop="dateCreated datePublished" datetime="2019-10-06T13:16:51+08:00">2019-10-06</time>
             
 
             
@@ -449,7 +449,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++,<span class="built_in">puts</span>(<span class="string">""</span>))</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i][j]);</span><br></pre></td></tr></table></figure>
 <h3 id="快速幂"><a class="markdownIt-Anchor" href="#快速幂"></a> 快速幂</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">Pow</span><span class="params">(LL a,LL b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL ret=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;b;)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)ret=ret*a%mod;</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        a=a*a%mod;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">Pow</span><span class="params">(LL a,LL b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL ret=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;b;b&gt;&gt;=<span class="number">1</span>,a=a*a%mod)<span class="keyword">if</span>(b&amp;<span class="number">1</span>)ret=ret*a%mod;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="function">LL <span class="title">Pow</span><span class="params">(LL a,LL b,LL ret=<span class="number">1</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(;b;b&gt;&gt;=<span class="number">1</span>,a=a*a%mod)(ret*=b&amp;<span class="number">1</span>?a:<span class="number">1</span>)%=mod;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在极端情况下，为了让第一个空能发挥出最大效能，会把局部变量定义到外面。举例见第四节的Dijkstra。</p>
 <h2 id="3-三目运算符"><a class="markdownIt-Anchor" href="#3-三目运算符"></a> 3. 三目运算符</h2>
 <p>众所周知，三目运算符可以替代一个简单的if语句。由于选择语句的特殊性，我们知道if是十分难压掉的，所以可以考虑用三目运算符来替代一个简单if。</p>
